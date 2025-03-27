@@ -61,7 +61,7 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Security Threats Section - Modified to paragraph format */}
+        {/* Security Threats Section - Modified to paragraph format with smaller paragraphs */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -88,8 +88,15 @@ const CyberSecurity = () => {
                   </svg>
                   Ransomware Protection
                 </h3>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">The Growing Ransomware Threat</h4>
+                <p className="text-gray-700 mb-4">
+                  Ransomware attacks have become one of the most significant threats to organizations worldwide. Attackers encrypt critical data and demand payment for its release, often causing operational shutdowns and financial losses. Our comprehensive protection combines multiple defensive layers that continuously monitor for suspicious encryption behaviors and unusual file activities.
+                </p>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Recovery and Resilience</h4>
                 <p className="text-gray-700">
-                  Ransomware attacks have become one of the most significant threats to organizations worldwide, with attackers encrypting critical data and demanding payment for its release. Our comprehensive ransomware protection combines multiple layers of defense to prevent, detect, and recover from these attacks. We implement advanced threat monitoring systems that continuously scan for suspicious file activities and encryption behaviors. Our automated backup solutions create secure, immutable copies of your critical data that remain unaffected by ransomware encryption. In the event of an attack, our rapid recovery protocols minimize downtime and data loss, allowing your business to resume operations quickly while our security team contains and eliminates the threat.
+                  We implement automated backup solutions that create secure, immutable copies of your critical data that remain protected from ransomware encryption. In the event of an attack, our rapid recovery protocols minimize downtime and data loss, allowing your business to resume operations quickly while our security team contains and eliminates the threat.
                 </p>
               </div>
               
@@ -104,8 +111,15 @@ const CyberSecurity = () => {
                   </svg>
                   Phishing Defense
                 </h3>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Advanced Email Protection</h4>
+                <p className="text-gray-700 mb-4">
+                  Phishing remains the entry point for many successful cyberattacks, with attackers using increasingly sophisticated social engineering techniques. Our email filtering technology uses machine learning algorithms to identify and quarantine suspicious messages before they reach user inboxes, preventing credential theft and malware installation.
+                </p>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Human-Centered Security</h4>
                 <p className="text-gray-700">
-                  Phishing remains the entry point for many successful cyberattacks, with attackers using increasingly sophisticated social engineering techniques to trick employees into revealing credentials or installing malware. Our anti-phishing solution combines advanced technology with human awareness training to create a robust defense. Our email filtering and scanning technology uses machine learning algorithms to identify and quarantine suspicious messages before they reach user inboxes. This is complemented by our comprehensive security awareness training program, which educates employees on recognizing phishing attempts and proper security protocols. We also conduct regular simulated phishing campaigns to test and reinforce this training, providing measurable improvement in your organization's human firewall over time.
+                  Technology alone isn't enough. Our comprehensive security awareness training educates employees on recognizing phishing attempts and following proper security protocols. We conduct regular simulated phishing campaigns to test and reinforce this training, providing measurable improvement in your organization's human firewall over time.
                 </p>
               </div>
               
@@ -118,8 +132,15 @@ const CyberSecurity = () => {
                   </svg>
                   Vulnerability Management
                 </h3>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Proactive Security Assessment</h4>
+                <p className="text-gray-700 mb-4">
+                  Unpatched vulnerabilities provide attackers with an open door to your network. Our vulnerability management program takes a proactive approach to identifying security gaps before they can be exploited. We conduct regular assessments across your entire IT infrastructure, including networks, servers, applications, and endpoints.
+                </p>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Strategic Remediation</h4>
                 <p className="text-gray-700">
-                  Unpatched vulnerabilities in your systems and applications provide attackers with an open door to your network. Our vulnerability management program takes a proactive approach to identifying and remediating these security gaps before they can be exploited. We conduct regular security assessments across your entire IT infrastructure, including networks, servers, applications, and endpoints. Our penetration testing team simulates real-world attacks to discover vulnerabilities that automated tools might miss. We also implement a structured patch management process that prioritizes updates based on risk level, ensuring critical security patches are applied promptly while minimizing disruption to your business operations. This comprehensive approach significantly reduces your attack surface and strengthens your overall security posture.
+                  Our penetration testing team simulates real-world attacks to discover vulnerabilities that automated tools might miss. We implement a structured patch management process that prioritizes updates based on risk level, ensuring critical security patches are applied promptly while minimizing disruption to your business operations.
                 </p>
               </div>
               
@@ -131,8 +152,15 @@ const CyberSecurity = () => {
                   </svg>
                   Insider Threat Protection
                 </h3>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Behavioral Analytics</h4>
+                <p className="text-gray-700 mb-4">
+                  Some of the most damaging security incidents originate from within organizations. Our insider threat protection deploys user behavior analytics that establish normal activity patterns for each user and alert security teams when anomalous behaviors are detected, helping to identify potential threats before they cause damage.
+                </p>
+                
+                <h4 className="text-lg font-medium text-gray-900 mt-4">Access Control and Data Protection</h4>
                 <p className="text-gray-700">
-                  Some of the most damaging security incidents originate from within organizations, whether through malicious actions or inadvertent mistakes. Our insider threat protection program helps identify, deter, and respond to these internal risks. We deploy user behavior analytics that establish normal patterns of activity for each user and alert security teams when anomalous behaviors are detected. Our access control management solutions implement the principle of least privilege, ensuring employees only have access to the resources necessary for their roles. Additionally, our data loss prevention tools monitor and control the movement of sensitive information across your network, preventing unauthorized exfiltration of critical data. Together, these technologies create a comprehensive framework for mitigating the risks posed by insider threats while respecting employee privacy.
+                  Our access control management solutions implement the principle of least privilege, ensuring employees only have access to resources necessary for their roles. Additionally, our data loss prevention tools monitor and control the movement of sensitive information across your network, preventing unauthorized exfiltration of critical data.
                 </p>
               </div>
             </div>
