@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import { Server, LineChart, Code } from "lucide-react";
+import { Server, LineChart, Code, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -42,14 +42,14 @@ const BusinessSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 hover:shadow-md hover:scale-[1.01] transition-all">
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-100 text-blue-600 mb-6">
               <Server size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Tech Support & IT Consultation</h3>
+            <h3 className="text-xl font-semibold mb-3">IT Consulting & Strategy</h3>
             <p className="text-gray-600 mb-6">
-              Reliable tech support and strategic IT consulting to keep your business running smoothly and securely.
+              Strategic IT consulting to align your technology investments with business goals and create a roadmap for success.
             </p>
             <Link to="/business/consulting" className="text-primary font-medium flex items-center gap-1 group">
               Learn more
@@ -75,9 +75,9 @@ const BusinessSection = () => {
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 mb-6">
               <LineChart size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Smart Business Automation</h3>
+            <h3 className="text-xl font-semibold mb-3">Business Intelligence</h3>
             <p className="text-gray-600 mb-6">
-              Automate repetitive tasks, optimize workflow, and enhance productivity with intelligent automation solutions.
+              Turn your data into actionable insights with advanced analytics, dashboards, and reporting tools customized for your business needs.
             </p>
             <Link to="/business/intelligence" className="text-primary font-medium flex items-center gap-1 group">
               Learn more
@@ -103,11 +103,39 @@ const BusinessSection = () => {
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
               <Code size={24} />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Custom Software & Tech Integration</h3>
+            <h3 className="text-xl font-semibold mb-3">Custom Software Development</h3>
             <p className="text-gray-600 mb-6">
-              Build flexible, scalable, and user-friendly software solutions that integrate seamlessly with your existing systems.
+              Tailor-made software solutions designed specifically for your unique business requirements and industry challenges.
             </p>
             <Link to="/business/software" className="text-primary font-medium flex items-center gap-1 group">
+              Learn more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400 hover:shadow-md hover:scale-[1.01] transition-all">
+            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
+              <Shield size={24} />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Cybersecurity Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Protect your business with enterprise-grade security solutions, vulnerability assessments, and security training programs.
+            </p>
+            <Link to="/business/cybersecurity" className="text-primary font-medium flex items-center gap-1 group">
               Learn more
               <svg
                 xmlns="http://www.w3.org/2000/svg"

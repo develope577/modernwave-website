@@ -1,7 +1,8 @@
 
 import { useEffect, useRef } from "react";
-import { ArrowRight, Server, BarChart, Code, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, BarChart, Code, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -79,41 +80,12 @@ const Business = () => {
                 Comprehensive Business Solutions
               </h2>
               <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                From cloud infrastructure to custom software development, we provide end-to-end technology solutions to address your business challenges.
+                From business intelligence to cybersecurity, we provide end-to-end technology solutions to address your specific business challenges.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Service 1 */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-100 text-blue-600 mb-6">
-                  <Server size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-6">
-                  Scalable, secure, and cost-effective cloud solutions for businesses of all sizes. Includes migration services, managed hosting, and hybrid cloud options.
-                </p>
-                <a href="#" className="text-primary font-medium flex items-center gap-1 group">
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-              
-              {/* Service 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {/* Business Intelligence */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 mb-6">
                   <BarChart size={24} />
@@ -122,7 +94,7 @@ const Business = () => {
                 <p className="text-gray-600 mb-6">
                   Turn your data into actionable insights with advanced analytics, dashboards, and reporting tools customized for your business needs.
                 </p>
-                <a href="#" className="text-primary font-medium flex items-center gap-1 group">
+                <Link to="/business/intelligence" className="text-primary font-medium flex items-center gap-1 group">
                   Learn more
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -139,10 +111,10 @@ const Business = () => {
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
               
-              {/* Service 3 */}
+              {/* Custom Software Development */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
                   <Code size={24} />
@@ -151,7 +123,7 @@ const Business = () => {
                 <p className="text-gray-600 mb-6">
                   Tailor-made software solutions designed specifically for your unique business requirements and industry challenges.
                 </p>
-                <a href="#" className="text-primary font-medium flex items-center gap-1 group">
+                <Link to="/business/software" className="text-primary font-medium flex items-center gap-1 group">
                   Learn more
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -168,103 +140,19 @@ const Business = () => {
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
               
-              {/* Service 4 */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-6">
-                  <Users size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Digital Transformation</h3>
-                <p className="text-gray-600 mb-6">
-                  Comprehensive digital transformation services to modernize your business processes, culture, and customer experiences.
-                </p>
-                <a href="#" className="text-primary font-medium flex items-center gap-1 group">
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-              
-              {/* Service 5 */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Cybersecurity Solutions</h3>
-                <p className="text-gray-600 mb-6">
-                  Protect your business with enterprise-grade security solutions, vulnerability assessments, and security training programs.
-                </p>
-                <a href="#" className="text-primary font-medium flex items-center gap-1 group">
-                  Learn more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-              
-              {/* Service 6 */}
+              {/* IT Consulting & Strategy */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-amber-100 text-amber-600 mb-6">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="12" />
-                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                  </svg>
+                  <Users size={24} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">IT Consulting & Strategy</h3>
                 <p className="text-gray-600 mb-6">
                   Strategic IT consulting to align your technology investments with business goals and create a roadmap for success.
                 </p>
-                <a href="#" className="text-primary font-medium flex items-center gap-1 group">
+                <Link to="/business/consulting" className="text-primary font-medium flex items-center gap-1 group">
                   Learn more
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -281,7 +169,36 @@ const Business = () => {
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
+              </div>
+              
+              {/* Cybersecurity */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
+                  <Shield size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Cybersecurity Solutions</h3>
+                <p className="text-gray-600 mb-6">
+                  Protect your business with enterprise-grade security solutions, vulnerability assessments, and security training programs.
+                </p>
+                <Link to="/business/cybersecurity" className="text-primary font-medium flex items-center gap-1 group">
+                  Learn more
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
@@ -388,7 +305,21 @@ const Business = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="text-primary shrink-0 mt-1" size={24} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary shrink-0 mt-1"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Industry Expertise</h3>
                     <p className="text-gray-600">
@@ -400,7 +331,21 @@ const Business = () => {
               
               <div className="bg-white p-6 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="text-primary shrink-0 mt-1" size={24} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary shrink-0 mt-1"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
                     <p className="text-gray-600">
@@ -412,7 +357,21 @@ const Business = () => {
               
               <div className="bg-white p-6 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="text-primary shrink-0 mt-1" size={24} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary shrink-0 mt-1"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Cutting-Edge Technology</h3>
                     <p className="text-gray-600">
@@ -424,7 +383,21 @@ const Business = () => {
               
               <div className="bg-white p-6 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="text-primary shrink-0 mt-1" size={24} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary shrink-0 mt-1"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Client-Centered Approach</h3>
                     <p className="text-gray-600">
@@ -436,7 +409,21 @@ const Business = () => {
               
               <div className="bg-white p-6 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="text-primary shrink-0 mt-1" size={24} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary shrink-0 mt-1"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Scalable Solutions</h3>
                     <p className="text-gray-600">
@@ -448,7 +435,21 @@ const Business = () => {
               
               <div className="bg-white p-6 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="text-primary shrink-0 mt-1" size={24} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary shrink-0 mt-1"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Ongoing Support</h3>
                     <p className="text-gray-600">
