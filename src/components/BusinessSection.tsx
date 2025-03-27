@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Server, LineChart, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const BusinessSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,7 +51,7 @@ const BusinessSection = () => {
             <p className="text-gray-600 mb-6">
               Reliable tech support and strategic IT consulting to keep your business running smoothly and securely.
             </p>
-            <a href="#" className="text-primary font-medium flex items-center gap-1 group">
+            <Link to="/business/consulting" className="text-primary font-medium flex items-center gap-1 group">
               Learn more
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +68,7 @@ const BusinessSection = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
           
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 hover:shadow-md hover:scale-[1.01] transition-all">
@@ -78,7 +79,7 @@ const BusinessSection = () => {
             <p className="text-gray-600 mb-6">
               Automate repetitive tasks, optimize workflow, and enhance productivity with intelligent automation solutions.
             </p>
-            <a href="#" className="text-primary font-medium flex items-center gap-1 group">
+            <Link to="/business/intelligence" className="text-primary font-medium flex items-center gap-1 group">
               Learn more
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +96,7 @@ const BusinessSection = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
           
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300 hover:shadow-md hover:scale-[1.01] transition-all">
@@ -106,7 +107,7 @@ const BusinessSection = () => {
             <p className="text-gray-600 mb-6">
               Build flexible, scalable, and user-friendly software solutions that integrate seamlessly with your existing systems.
             </p>
-            <a href="#" className="text-primary font-medium flex items-center gap-1 group">
+            <Link to="/business/software" className="text-primary font-medium flex items-center gap-1 group">
               Learn more
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +124,7 @@ const BusinessSection = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
         
