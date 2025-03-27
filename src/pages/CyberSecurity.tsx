@@ -61,10 +61,10 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Security Threats Section */}
+        {/* Security Threats Section - Modified to paragraph format */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
                 Protecting Against Modern Threats
               </h2>
@@ -73,101 +73,67 @@ const CyberSecurity = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 7h-3a2 2 0 0 0-2 2v.5"/><path d="M14 10.5V14"/><path d="M14 18v.5a2 2 0 0 0 2 2h3"/><path d="M3 7h3a2 2 0 0 1 2 2v.5"/><path d="M8 10.5V14"/><path d="M8 18v.5a2 2 0 0 1-2 2H3"/><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="12" cy="12" r="1"/></svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Ransomware Protection</h3>
-                <p className="text-gray-600 mb-6">
-                  Advanced ransomware detection and prevention systems to protect your critical data and ensure business continuity.
+            <div className="prose prose-lg max-w-4xl mx-auto">
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center text-red-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="mr-3" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 7h-3a2 2 0 0 0-2 2v.5"/>
+                    <path d="M14 10.5V14"/>
+                    <path d="M14 18v.5a2 2 0 0 0 2 2h3"/>
+                    <path d="M3 7h3a2 2 0 0 1 2 2v.5"/>
+                    <path d="M8 10.5V14"/>
+                    <path d="M8 18v.5a2 2 0 0 1-2 2H3"/>
+                    <rect width="18" height="18" x="3" y="3" rx="2"/>
+                    <circle cx="12" cy="12" r="1"/>
+                  </svg>
+                  Ransomware Protection
+                </h3>
+                <p className="text-gray-700">
+                  Ransomware attacks have become one of the most significant threats to organizations worldwide, with attackers encrypting critical data and demanding payment for its release. Our comprehensive ransomware protection combines multiple layers of defense to prevent, detect, and recover from these attacks. We implement advanced threat monitoring systems that continuously scan for suspicious file activities and encryption behaviors. Our automated backup solutions create secure, immutable copies of your critical data that remain unaffected by ransomware encryption. In the event of an attack, our rapid recovery protocols minimize downtime and data loss, allowing your business to resume operations quickly while our security team contains and eliminates the threat.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Real-time threat monitoring</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Automated backup solutions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Rapid recovery protocols</span>
-                  </li>
-                </ul>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M10 2v4h4V2"/><path d="M18 18a4 4 0 0 0-4-4"/><path d="M10 18a4 4 0 0 1-4-4"/><line x1="12" x2="12" y1="10" y2="14"/></svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Phishing Defense</h3>
-                <p className="text-gray-600 mb-6">
-                  Comprehensive anti-phishing solutions that protect your employees from sophisticated social engineering attacks.
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center text-red-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="mr-3" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="16" height="20" x="4" y="2" rx="2"/>
+                    <path d="M10 2v4h4V2"/>
+                    <path d="M18 18a4 4 0 0 0-4-4"/>
+                    <path d="M10 18a4 4 0 0 1-4-4"/>
+                    <line x1="12" x2="12" y1="10" y2="14"/>
+                  </svg>
+                  Phishing Defense
+                </h3>
+                <p className="text-gray-700">
+                  Phishing remains the entry point for many successful cyberattacks, with attackers using increasingly sophisticated social engineering techniques to trick employees into revealing credentials or installing malware. Our anti-phishing solution combines advanced technology with human awareness training to create a robust defense. Our email filtering and scanning technology uses machine learning algorithms to identify and quarantine suspicious messages before they reach user inboxes. This is complemented by our comprehensive security awareness training program, which educates employees on recognizing phishing attempts and proper security protocols. We also conduct regular simulated phishing campaigns to test and reinforce this training, providing measurable improvement in your organization's human firewall over time.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Email filtering and scanning</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Security awareness training</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Simulated phishing campaigns</span>
-                  </li>
-                </ul>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Vulnerability Management</h3>
-                <p className="text-gray-600 mb-6">
-                  Proactive identification and remediation of security vulnerabilities before they can be exploited.
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center text-red-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="mr-3" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" x2="12" y1="8" y2="12"/>
+                    <line x1="12" x2="12.01" y1="16" y2="16"/>
+                  </svg>
+                  Vulnerability Management
+                </h3>
+                <p className="text-gray-700">
+                  Unpatched vulnerabilities in your systems and applications provide attackers with an open door to your network. Our vulnerability management program takes a proactive approach to identifying and remediating these security gaps before they can be exploited. We conduct regular security assessments across your entire IT infrastructure, including networks, servers, applications, and endpoints. Our penetration testing team simulates real-world attacks to discover vulnerabilities that automated tools might miss. We also implement a structured patch management process that prioritizes updates based on risk level, ensuring critical security patches are applied promptly while minimizing disruption to your business operations. This comprehensive approach significantly reduces your attack surface and strengthens your overall security posture.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Regular security assessments</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Penetration testing</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Patch management</span>
-                  </li>
-                </ul>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Insider Threat Protection</h3>
-                <p className="text-gray-600 mb-6">
-                  Solutions designed to detect, deter, and respond to threats that originate within your organization.
+              <div className="mb-12">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center text-red-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="mr-3" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                  Insider Threat Protection
+                </h3>
+                <p className="text-gray-700">
+                  Some of the most damaging security incidents originate from within organizations, whether through malicious actions or inadvertent mistakes. Our insider threat protection program helps identify, deter, and respond to these internal risks. We deploy user behavior analytics that establish normal patterns of activity for each user and alert security teams when anomalous behaviors are detected. Our access control management solutions implement the principle of least privilege, ensuring employees only have access to the resources necessary for their roles. Additionally, our data loss prevention tools monitor and control the movement of sensitive information across your network, preventing unauthorized exfiltration of critical data. Together, these technologies create a comprehensive framework for mitigating the risks posed by insider threats while respecting employee privacy.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">User behavior analytics</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Access control management</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span className="text-gray-700">Data loss prevention</span>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
