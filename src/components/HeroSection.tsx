@@ -1,7 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -49,13 +49,17 @@ const HeroSection = () => {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <Button size="lg" className="gap-2 group">
-              Explore Business Solutions
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            <Button size="lg" className="gap-2 group" asChild>
+              <Link to="/business">
+                Explore Business Solutions
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 group">
-              Discover Consumer Tech
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            <Button size="lg" variant="outline" className="gap-2 group" asChild>
+              <Link to="/consumer">
+                Discover Consumer Tech
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
         </div>
