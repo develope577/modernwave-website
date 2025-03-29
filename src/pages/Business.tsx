@@ -1,6 +1,5 @@
-
 import { useEffect, useRef } from "react";
-import { ArrowRight, BarChart, Code, Shield, Users } from "lucide-react";
+import { ArrowRight, BarChart, Code, Shield, Users, Target, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -79,6 +78,67 @@ const Business = () => {
           </div>
         </section>
         
+        {/* Our Aim, Process, and Goals Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Our Aim, Process, and Goals
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                We're committed to helping businesses leverage technology as a true competitive advantage.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-sm border border-blue-100">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-6">
+                  <Target size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Our Aim</h3>
+                <p className="text-gray-600">
+                  To bridge the gap between business challenges and technological solutions, making advanced technology accessible and beneficial for businesses of all sizes. We aim to be trusted technology partners who understand both the technical landscape and business realities.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 shadow-sm border border-purple-100">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
+                  <Workflow size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Our Process</h3>
+                <p className="text-gray-600">
+                  We follow a collaborative, transparent process that begins with deeply understanding your business needs. From consultation through implementation and ongoing support, we maintain clear communication, ensuring solutions are delivered on time and within budget while exceeding expectations.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-8 shadow-sm border border-indigo-100">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 2L4 10l8 8 8-8z" />
+                    <path d="M4 22v-8" />
+                    <path d="M20 22v-8" />
+                    <path d="M12 18v4" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Our Goals</h3>
+                <p className="text-gray-600">
+                  Our goals extend beyond implementing technology—we aim to drive measurable business outcomes. Whether it's increasing operational efficiency, enhancing security posture, or enabling data-driven decision making, our focus is on delivering solutions that provide clear ROI and sustainable competitive advantage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="py-20" ref={solutionsRef} id="comprehensive-business-solutions">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -468,9 +528,11 @@ const Business = () => {
             </div>
             
             <div className="mt-16 text-center">
-              <Button size="lg" className="gap-2 group">
-                Schedule a Consultation
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              <Button size="lg" className="gap-2 group" asChild>
+                <Link to="/contact">
+                  Schedule a Consultation
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>

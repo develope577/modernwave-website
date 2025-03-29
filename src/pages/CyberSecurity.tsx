@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, LockKeyhole, Server, Shield, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -89,43 +89,47 @@ const CyberSecurity = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <div className="mb-4 text-red-600">
-                  <AlertTriangle size={32} />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">The Growing Threat Landscape</h3>
-                <p className="text-gray-600 mb-6">
-                  Cyber attacks continue to increase in both frequency and sophistication, targeting organizations of all sizes across every industry. As businesses become more digitally connected, the potential attack surface grows exponentially, creating new vulnerabilities that require constant vigilance and protection.
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
+                <h3 className="text-2xl font-semibold mb-4 text-red-600">The Growing Threat Landscape</h3>
+                <p className="text-gray-700 mb-6">
+                  The digital transformation accelerating across industries brings unprecedented opportunities—and equally significant risks. Cybercriminals continue to develop increasingly sophisticated attack methods, targeting organizations of all sizes. No business is too small to be targeted, with 43% of cyberattacks now aimed at small businesses while only 14% consider themselves prepared to defend against these threats.
                 </p>
-                <p className="text-gray-600">
-                  Without adequate security measures, your business faces risks ranging from data breaches and intellectual property theft to operational disruption and significant financial losses. More importantly, security incidents can severely damage customer trust and brand reputation built over years.
+                <p className="text-gray-700">
+                  Today's threat landscape encompasses ransomware, phishing campaigns, zero-day exploits, and supply chain attacks that can bypass traditional security measures. The stakes are higher than ever, with the average cost of a data breach reaching $4.35 million in 2022—and that doesn't account for the immeasurable damage to customer trust and brand reputation.
                 </p>
               </div>
               
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-4">The Business Impact</h3>
-                <p className="text-gray-600 mb-6">
-                  Investing in cybersecurity is no longer just about compliance or risk mitigation—it's about business enablement and competitive advantage. Organizations with strong security postures build greater trust with customers, partners, and stakeholders, opening doors to new opportunities and markets.
+                <h3 className="text-2xl font-semibold mb-4 text-red-600">Beyond Compliance: Security as Business Enabler</h3>
+                <p className="text-gray-700 mb-6">
+                  Forward-thinking organizations recognize that strong cybersecurity goes beyond mere regulatory compliance—it's a business differentiator. Customers increasingly choose partners with proven security practices, investors examine security posture before funding decisions, and robust security enables innovation rather than hindering it.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">The average cost of a data breach reached $4.35 million in 2022</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">60% of small companies go out of business within 6 months of a cyber attack</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">95% of cybersecurity breaches are caused by human error</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">Ransomware attacks occur every 11 seconds, up from every 40 seconds in 2016</span>
-                  </li>
-                </ul>
+                <div className="bg-red-50 p-6 rounded-lg border border-red-100 mt-6">
+                  <h4 className="text-lg font-semibold mb-3">Critical Statistics</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                      <span className="text-gray-700">60% of small companies go out of business within 6 months of a cyber attack</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                      <span className="text-gray-700">95% of cybersecurity breaches are caused by human error</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                      <span className="text-gray-700">Ransomware attacks occur every 11 seconds, up from every 40 seconds in 2016</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                      <span className="text-gray-700">Organizations with comprehensive security programs experience 53% fewer attacks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                      <span className="text-gray-700">43% of all data breaches target small and medium businesses</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
