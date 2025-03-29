@@ -1,11 +1,18 @@
-
+import { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Code, ArrowRight } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
+import { Link } from "react-router-dom";
 
 const CustomSoftware = () => {
+  const processRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProcess = () => {
+    processRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -27,11 +34,13 @@ const CustomSoftware = () => {
                   Tailor-made software solutions designed specifically for your unique business requirements and industry challenges. We build flexible, scalable, and user-friendly applications.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group">
-                    Start Your Project
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" className="gap-2 group" asChild>
+                    <Link to="/contact">
+                      Start Your Project
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group">
+                  <Button size="lg" variant="outline" className="gap-2 group" onClick={scrollToProcess}>
                     Explore Our Process
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
@@ -50,7 +59,7 @@ const CustomSoftware = () => {
         </section>
         
         {/* Development Process Section */}
-        <section className="py-20">
+        <section className="py-20" ref={processRef}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
@@ -175,6 +184,42 @@ const CustomSoftware = () => {
                 <h3 className="text-xl font-semibold mb-3">Database Solutions</h3>
                 <p className="text-gray-600 mb-6">
                   Custom database design, development, and optimization to ensure your data is secure, accessible, and efficiently managed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* New Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Transforming Your Business With Technology
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                We help organizations achieve their goals through innovative custom software solutions.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md">
+                <h3 className="text-2xl font-semibold mb-4">Future-Proof Technology</h3>
+                <p className="text-gray-600 mb-6">
+                  Our custom software solutions are built with scalability and future growth in mind. We use modern, proven technologies that ensure your software remains relevant and adaptable as your business evolves and market conditions change.
+                </p>
+                <p className="text-gray-600">
+                  By investing in custom software, you're not just solving today's challenges—you're building a foundation that can grow and adapt to tomorrow's opportunities, giving your business a competitive advantage for years to come.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md">
+                <h3 className="text-2xl font-semibold mb-4">ROI-Driven Development</h3>
+                <p className="text-gray-600 mb-6">
+                  We understand that software is an investment, and every investment should deliver measurable returns. Our development process is focused on creating solutions that directly address your business challenges, streamline operations, and create new opportunities for growth and revenue.
+                </p>
+                <p className="text-gray-600">
+                  Throughout the development process, we maintain clear communication about how each feature and function ties back to your business objectives, ensuring that the final product delivers real, quantifiable value to your organization.
                 </p>
               </div>
             </div>

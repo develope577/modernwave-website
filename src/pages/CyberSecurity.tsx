@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, LockKeyhole, Server, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle, LockKeyhole, Server, Shield, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const CyberSecurity = () => {
@@ -51,13 +51,17 @@ const CyberSecurity = () => {
                   Protect your business with comprehensive cybersecurity strategies designed to safeguard your critical data, systems, and reputation.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700">
-                    Get Security Assessment
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/contact">
+                      Get Security Assessment
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group">
-                    Explore Solutions
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" variant="outline" className="gap-2 group" asChild>
+                    <Link to="/business">
+                      Explore Solutions
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -68,6 +72,60 @@ const CyberSecurity = () => {
                   alt="Cybersecurity protection"
                   className="rounded-lg shadow-xl"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Why It Matters Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Why It Matters
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                In today's digital landscape, robust cybersecurity isn't optional—it's essential for business survival.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <div className="mb-4 text-red-600">
+                  <AlertTriangle size={32} />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">The Growing Threat Landscape</h3>
+                <p className="text-gray-600 mb-6">
+                  Cyber attacks continue to increase in both frequency and sophistication, targeting organizations of all sizes across every industry. As businesses become more digitally connected, the potential attack surface grows exponentially, creating new vulnerabilities that require constant vigilance and protection.
+                </p>
+                <p className="text-gray-600">
+                  Without adequate security measures, your business faces risks ranging from data breaches and intellectual property theft to operational disruption and significant financial losses. More importantly, security incidents can severely damage customer trust and brand reputation built over years.
+                </p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="text-2xl font-semibold mb-4">The Business Impact</h3>
+                <p className="text-gray-600 mb-6">
+                  Investing in cybersecurity is no longer just about compliance or risk mitigation—it's about business enablement and competitive advantage. Organizations with strong security postures build greater trust with customers, partners, and stakeholders, opening doors to new opportunities and markets.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                    <span className="text-gray-700">The average cost of a data breach reached $4.35 million in 2022</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                    <span className="text-gray-700">60% of small companies go out of business within 6 months of a cyber attack</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                    <span className="text-gray-700">95% of cybersecurity breaches are caused by human error</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
+                    <span className="text-gray-700">Ransomware attacks occur every 11 seconds, up from every 40 seconds in 2016</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -155,61 +213,8 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Protecting Against Modern Threats Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display">
-                Protecting Against Modern Threats
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                Our comprehensive security approach addresses the most common and sophisticated cyber threats facing businesses today.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-4">Advanced Threat Detection</h3>
-                <p className="text-gray-600 mb-6">
-                  Our cutting-edge threat detection systems use machine learning and behavioral analytics to identify suspicious activities and potential breaches before they cause damage. We continuously monitor your network, endpoints, and cloud infrastructure, providing real-time alerts and proactive response to emerging threats.
-                </p>
-                <p className="text-gray-600">
-                  With our managed security operations center (SOC), your business benefits from 24/7 monitoring by security experts who can quickly respond to incidents and implement containment measures to minimize impact.
-                </p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-4">Data Protection & Compliance</h3>
-                <p className="text-gray-600 mb-6">
-                  Safeguard sensitive information with our comprehensive data protection solutions, including data classification, encryption, and access controls. Our experts help you implement proper data governance practices that align with industry regulations such as GDPR, HIPAA, and PCI DSS.
-                </p>
-                <p className="text-gray-600">
-                  We also provide regular compliance assessments and documentation to help you maintain regulatory requirements and demonstrate due diligence to stakeholders, customers, and partners.
-                </p>
-              </div>
-            </div>
-            
-            <div className="mt-12 text-center">
-              <Link 
-                to="#" 
-                className={buttonVariants({
-                  variant: "outline",
-                  size: "lg",
-                  className: "gap-2 group border-red-600 text-red-600 hover:bg-red-50"
-                })}
-              >
-                Learn More About Our Security Approach
-                <ArrowRight 
-                  size={16} 
-                  className="transition-transform duration-300 group-hover:translate-x-1" 
-                />
-              </Link>
-            </div>
-          </div>
-        </section>
-        
         {/* Security Assessment Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -263,9 +268,11 @@ const CyberSecurity = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700">
-                    Request Security Assessment
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700" asChild>
+                    <Link to="/contact">
+                      Request Security Assessment
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </div>
               </div>

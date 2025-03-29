@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -58,12 +59,6 @@ const HeroSection = () => {
             <Button size="lg" variant="outline" className="gap-2 group" asChild>
               <Link to="/consumer">
                 Discover Consumer Tech
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="secondary" className="gap-2 group" asChild>
-              <Link to="/contact">
-                Schedule Consultation
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>

@@ -163,7 +163,9 @@ const BusinessSection = () => {
               <p className="text-gray-600 mb-6">
                 Our experts will work with you to understand your specific needs and design the perfect solution for your business challenges.
               </p>
-              <Button size="lg">Schedule Consultation</Button>
+              <Button size="lg" asChild>
+                <Link to="/contact">Schedule Consultation</Link>
+              </Button>
             </div>
             <div className="flex justify-center md:justify-end">
               <img
