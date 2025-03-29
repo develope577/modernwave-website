@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Home, Smartphone, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ConsumerSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -49,7 +50,7 @@ const ConsumerSection = () => {
             <p className="text-gray-600 mb-6">
               Connect and control your home devices with intuitive, voice-driven smart home solutions.
             </p>
-            <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
+            <Link to="/consumer" className="text-green-600 font-medium flex items-center gap-1 group">
               Explore features
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +67,7 @@ const ConsumerSection = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
           
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 hover:shadow-md hover:scale-[1.01] transition-all">
@@ -77,7 +78,7 @@ const ConsumerSection = () => {
             <p className="text-gray-600 mb-6">
               Powerful apps designed to streamline activities, help you stay organized, and improve productivity.
             </p>
-            <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
+            <Link to="/consumer" className="text-green-600 font-medium flex items-center gap-1 group">
               Explore features
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +95,7 @@ const ConsumerSection = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
           
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300 hover:shadow-md hover:scale-[1.01] transition-all">
@@ -105,7 +106,7 @@ const ConsumerSection = () => {
             <p className="text-gray-600 mb-6">
               Protect your digital life with user-friendly yet powerful security solutions for all your devices.
             </p>
-            <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
+            <Link to="/consumer" className="text-green-600 font-medium flex items-center gap-1 group">
               Explore features
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +123,7 @@ const ConsumerSection = () => {
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
         
@@ -132,7 +133,9 @@ const ConsumerSection = () => {
             <p className="text-gray-600 mb-6">
               Our consumer solutions are designed to be adaptive, affordable, and seamlessly integrate into your daily routine.
             </p>
-            <Button size="lg" className="bg-green-600 hover:bg-green-700">Try Consumer Tech</Button>
+            <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
+              <Link to="/consumer">Try Consumer Tech</Link>
+            </Button>
           </div>
           <div className="order-1 md:order-2">
             <img

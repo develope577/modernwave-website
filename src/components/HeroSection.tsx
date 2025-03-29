@@ -61,6 +61,12 @@ const HeroSection = () => {
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
+            <Button size="lg" variant="secondary" className="gap-2 group" asChild>
+              <Link to="/contact">
+                Schedule Consultation
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </div>
         

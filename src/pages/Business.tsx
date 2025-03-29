@@ -10,6 +10,7 @@ import ContactSection from "@/components/ContactSection";
 
 const Business = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const solutionsRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,6 +32,10 @@ const Business = () => {
 
     return () => observer.disconnect();
   }, []);
+  
+  const scrollToSolutions = () => {
+    solutionsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -50,13 +55,15 @@ const Business = () => {
                   Streamline operations, enhance productivity, and drive growth with our comprehensive business technology solutions.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group">
+                  <Button size="lg" className="gap-2 group" onClick={scrollToSolutions}>
                     Explore Solutions
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group">
-                    Book a Consultation
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" variant="outline" className="gap-2 group" asChild>
+                    <Link to="/contact">
+                      Book a Consultation
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -73,7 +80,7 @@ const Business = () => {
         </section>
         
         {/* Services Section */}
-        <section className="py-20">
+        <section className="py-20" ref={solutionsRef} id="comprehensive-business-solutions">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
