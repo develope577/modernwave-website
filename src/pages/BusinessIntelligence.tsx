@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { BarChart, ArrowRight } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
+import { Link } from "react-router-dom";
 
 const BusinessIntelligence = () => {
   return (
@@ -27,13 +28,8 @@ const BusinessIntelligence = () => {
                   Transform your raw data into actionable insights with our advanced analytics, dashboards, and reporting tools customized for your business needs.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group">
-                    Schedule Consultation
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group">
-                    Explore Case Studies
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" className="gap-2 group" asChild>
+                    <Link to="/contact">Schedule Consultation</Link>
                   </Button>
                 </div>
               </div>
@@ -44,6 +40,52 @@ const BusinessIntelligence = () => {
                   alt="Business Intelligence Dashboard"
                   className="rounded-lg shadow-xl"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Our Aim, Process and Goals Section (moved from Business Page) */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Our Aim, Process, and Goals
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                We aim to deliver exceptional business intelligence solutions through a proven methodology.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                  <span className="font-bold text-xl">01</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
+                <p className="text-gray-600">
+                  We're committed to transforming your business data into strategic assets that drive growth, improve decision-making, and create competitive advantages in your market.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                  <span className="font-bold text-xl">02</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Our Process</h3>
+                <p className="text-gray-600">
+                  We follow a structured approach - from understanding your unique business needs to data integration, dashboard development, and continuous optimization based on your feedback.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                  <span className="font-bold text-xl">03</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Our Goals</h3>
+                <p className="text-gray-600">
+                  Our ultimate goal is to help you make smarter, faster decisions by providing real-time visibility into your operations and turning complex data into clear, actionable insights.
+                </p>
               </div>
             </div>
           </div>

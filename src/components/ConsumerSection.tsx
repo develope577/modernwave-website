@@ -134,7 +134,7 @@ const ConsumerSection = () => {
               Our consumer solutions are designed to be adaptive, affordable, and seamlessly integrate into your daily routine.
             </p>
             <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
-              <Link to="/consumer">Try Consumer Tech</Link>
+              <Link to="/consumer#newsletter">Try Consumer Tech</Link>
             </Button>
           </div>
           <div className="order-1 md:order-2">
