@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { Server, LineChart, Code, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
