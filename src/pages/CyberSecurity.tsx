@@ -77,7 +77,7 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Why It Matters Section - Replaced with design from image */}
+        {/* Why It Matters Section - Updated with smaller cards */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -96,23 +96,23 @@ const CyberSecurity = () => {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                <div className="bg-red-50 rounded-lg p-8 text-center">
-                  <h3 className="text-4xl font-bold text-red-600 mb-3">60%</h3>
-                  <p className="text-gray-700">
+                <div className="bg-red-50 rounded-lg p-6 text-center">
+                  <h3 className="text-3xl font-bold text-red-600 mb-2">60%</h3>
+                  <p className="text-gray-700 text-sm">
                     of small businesses close within 6 months of a significant cyber attack
                   </p>
                 </div>
                 
-                <div className="bg-red-50 rounded-lg p-8 text-center">
-                  <h3 className="text-4xl font-bold text-red-600 mb-3">$4.35M</h3>
-                  <p className="text-gray-700">
+                <div className="bg-red-50 rounded-lg p-6 text-center">
+                  <h3 className="text-3xl font-bold text-red-600 mb-2">$4.35M</h3>
+                  <p className="text-gray-700 text-sm">
                     average cost of a data breach in 2022, a record high
                   </p>
                 </div>
                 
-                <div className="bg-red-50 rounded-lg p-8 text-center">
-                  <h3 className="text-4xl font-bold text-red-600 mb-3">300%</h3>
-                  <p className="text-gray-700">
+                <div className="bg-red-50 rounded-lg p-6 text-center">
+                  <h3 className="text-3xl font-bold text-red-600 mb-2">300%</h3>
+                  <p className="text-gray-700 text-sm">
                     increase in reported cybercrimes since the beginning of the pandemic
                   </p>
                 </div>
@@ -275,6 +275,28 @@ const CyberSecurity = () => {
                 />
               </div>
             </div>
+          </div>
+        </section>
+        
+        {/* Protect Your Business Section (NEW) */}
+        <section className="py-16 bg-red-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+              Protect Your Business Today
+            </h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+              Don't wait until after a breach. Take proactive steps to secure your business now.
+            </p>
+            <Button 
+              size="lg" 
+              className="gap-2 group bg-blue-600 hover:bg-blue-700" 
+              asChild
+            >
+              <Link to="/contact">
+                Request Security Assessment
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </section>
         
