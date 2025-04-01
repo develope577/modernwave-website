@@ -163,7 +163,11 @@ const BusinessSection = () => {
         <div className="mt-20 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Looking for a customized business solution?</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Technology Excellence 
+                <br/>
+                & Innovation
+              </h3>
               <p className="text-gray-600 mb-6">
                 Our experts will work with you to understand your specific needs and design the perfect solution for your business challenges.
               </p>

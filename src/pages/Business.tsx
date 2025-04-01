@@ -115,6 +115,17 @@ const Business = () => {
           </div>
         </section>
 
+        {/* Replace "Our Aim, Process, and Goals" with the third image */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <img 
+              src="/lovable-uploads/e268bf8e-bde5-4b0c-959f-76fd4152a418.png" 
+              alt="Our aim, process and goals" 
+              className="w-full rounded-lg shadow-md"
+            />
+          </div>
+        </section>
+
         {/* Comprehensive Business Solutions */}
         <div ref={solutionsRef}>
           <BusinessSection />
