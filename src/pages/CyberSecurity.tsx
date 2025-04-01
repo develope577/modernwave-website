@@ -77,60 +77,15 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Why It Matters Section */}
+        {/* First Image Section - Replacing "Why It Matters" */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display">
-                Why It Matters
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                In today's digital landscape, robust cybersecurity isn't optional—it's essential for business survival.
-              </p>
-            </div>
-            
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 mb-8">
-                <h3 className="text-2xl font-semibold mb-4 text-red-600">The Growing Threat Landscape</h3>
-                <p className="text-gray-700 mb-6">
-                  The digital transformation accelerating across industries brings unprecedented opportunities—and equally significant risks. Cybercriminals continue to develop increasingly sophisticated attack methods, targeting organizations of all sizes. No business is too small to be targeted, with 43% of cyberattacks now aimed at small businesses while only 14% consider themselves prepared to defend against these threats.
-                </p>
-                <p className="text-gray-700">
-                  Today's threat landscape encompasses ransomware, phishing campaigns, zero-day exploits, and supply chain attacks that can bypass traditional security measures. The stakes are higher than ever, with the average cost of a data breach reaching $4.35 million in 2022—and that doesn't account for the immeasurable damage to customer trust and brand reputation.
-                </p>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-4 text-red-600">Beyond Compliance: Security as Business Enabler</h3>
-                <p className="text-gray-700 mb-6">
-                  Forward-thinking organizations recognize that strong cybersecurity goes beyond mere regulatory compliance—it's a business differentiator. Customers increasingly choose partners with proven security practices, investors examine security posture before funding decisions, and robust security enables innovation rather than hindering it.
-                </p>
-                <div className="bg-red-50 p-6 rounded-lg border border-red-100 mt-6">
-                  <h4 className="text-lg font-semibold mb-3">Critical Statistics</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                      <span className="text-gray-700">60% of small companies go out of business within 6 months of a cyber attack</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                      <span className="text-gray-700">95% of cybersecurity breaches are caused by human error</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                      <span className="text-gray-700">Ransomware attacks occur every 11 seconds, up from every 40 seconds in 2016</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                      <span className="text-gray-700">Organizations with comprehensive security programs experience 53% fewer attacks</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                      <span className="text-gray-700">43% of all data breaches target small and medium businesses</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="flex justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Cybersecurity technology"
+                className="rounded-lg shadow-xl max-w-full"
+              />
             </div>
           </div>
         </section>
@@ -288,6 +243,19 @@ const CyberSecurity = () => {
                   className="rounded-lg shadow-xl"
                 />
               </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Second Image Section - Added at the bottom */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Circuit board closeup"
+                className="rounded-lg shadow-xl max-w-full"
+              />
             </div>
           </div>
         </section>
