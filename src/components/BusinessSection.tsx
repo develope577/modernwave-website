@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import { Server, LineChart, Code, Shield } from "lucide-react";
+import { Server, LineChart, Code, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -44,8 +44,8 @@ const BusinessSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 hover:shadow-md hover:scale-[1.01] transition-all">
-            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-100 text-blue-600 mb-6">
-              <Server size={24} />
+            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-amber-50 text-amber-600 mb-6">
+              <Users size={24} />
             </div>
             <h3 className="text-xl font-semibold mb-3">IT Consulting & Strategy</h3>
             <p className="text-gray-600 mb-6">
