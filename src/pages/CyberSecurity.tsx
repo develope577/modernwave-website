@@ -77,55 +77,45 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Why It Matters Section */}
+        {/* Why It Matters Section - Replaced with design from image */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
                 Why It Matters
               </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                In today's digital landscape, robust cybersecurity isn't optional—it's essential for business survival.
-              </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <div className="mb-4 text-red-600">
-                  <AlertTriangle size={32} />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">The Growing Threat Landscape</h3>
-                <p className="text-gray-600 mb-6">
-                  Cyber attacks continue to increase in both frequency and sophistication, targeting organizations of all sizes across every industry. As businesses become more digitally connected, the potential attack surface grows exponentially, creating new vulnerabilities that require constant vigilance and protection.
-                </p>
-                <p className="text-gray-600">
-                  Without adequate security measures, your business faces risks ranging from data breaches and intellectual property theft to operational disruption and significant financial losses. More importantly, security incidents can severely damage customer trust and brand reputation built over years.
-                </p>
-              </div>
+            <div className="max-w-3xl mx-auto space-y-8">
+              <p className="text-center text-lg text-gray-600">
+                In today's interconnected digital landscape, cybersecurity is not just an IT concern but a fundamental business risk that affects organizations of all sizes. As cyber threats continue to evolve in sophistication and scale, businesses must adopt comprehensive security strategies to protect their critical assets, maintain customer trust, and ensure operational continuity.
+              </p>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-4">The Business Impact</h3>
-                <p className="text-gray-600 mb-6">
-                  Investing in cybersecurity is no longer just about compliance or risk mitigation—it's about business enablement and competitive advantage. Organizations with strong security postures build greater trust with customers, partners, and stakeholders, opening doors to new opportunities and markets.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">The average cost of a data breach reached $4.35 million in 2022</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">60% of small companies go out of business within 6 months of a cyber attack</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">95% of cybersecurity breaches are caused by human error</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle size={20} className="text-red-600 mt-1 shrink-0" />
-                    <span className="text-gray-700">Ransomware attacks occur every 11 seconds, up from every 40 seconds in 2016</span>
-                  </li>
-                </ul>
+              <p className="text-center text-lg text-gray-600">
+                The cost of cybersecurity breaches extends far beyond immediate financial losses, affecting brand reputation, customer relationships, and competitive positioning. By implementing robust security measures, organizations can not only defend against current threats but also build resilience against emerging risks in an increasingly complex threat landscape.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div className="bg-red-50 rounded-lg p-8 text-center">
+                  <h3 className="text-4xl font-bold text-red-600 mb-3">60%</h3>
+                  <p className="text-gray-700">
+                    of small businesses close within 6 months of a significant cyber attack
+                  </p>
+                </div>
+                
+                <div className="bg-red-50 rounded-lg p-8 text-center">
+                  <h3 className="text-4xl font-bold text-red-600 mb-3">$4.35M</h3>
+                  <p className="text-gray-700">
+                    average cost of a data breach in 2022, a record high
+                  </p>
+                </div>
+                
+                <div className="bg-red-50 rounded-lg p-8 text-center">
+                  <h3 className="text-4xl font-bold text-red-600 mb-3">300%</h3>
+                  <p className="text-gray-700">
+                    increase in reported cybercrimes since the beginning of the pandemic
+                  </p>
+                </div>
               </div>
             </div>
           </div>
