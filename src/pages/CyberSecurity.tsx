@@ -51,14 +51,38 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Replaced "Why It Matters" section with the first image */}
+        {/* Why It Matters Section - Redesigned to be more stylish and centered */}
         <section className="py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <img 
-              src="/lovable-uploads/6f01ccef-f419-4df9-be67-68b3357174bf.png" 
-              alt="Cybersecurity importance" 
-              className="w-full rounded-lg shadow-md"
-            />
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-8">
+              Why It Matters
+            </h2>
+            
+            <div className="prose prose-lg max-w-none text-gray-600 mb-12">
+              <p className="mb-6">
+                In today's interconnected digital landscape, cybersecurity is not just an IT concern but a fundamental business risk that affects organizations of all sizes. As cyber threats continue to evolve in sophistication and scale, businesses must adopt comprehensive security strategies to protect their critical assets, maintain customer trust, and ensure operational continuity.
+              </p>
+              <p>
+                The cost of cybersecurity breaches extends far beyond immediate financial losses, affecting brand reputation, customer relationships, and competitive positioning. By implementing robust security measures, organizations can not only defend against current threats but also build resilience against emerging risks in an increasingly complex threat landscape.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-left">
+              <div className="bg-red-50 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-red-600 mb-2">60%</div>
+                <p className="text-gray-700">of small businesses close within 6 months of a significant cyber attack</p>
+              </div>
+              
+              <div className="bg-red-50 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-red-600 mb-2">$4.35M</div>
+                <p className="text-gray-700">average cost of a data breach in 2022, a record high</p>
+              </div>
+              
+              <div className="bg-red-50 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-red-600 mb-2">300%</div>
+                <p className="text-gray-700">increase in reported cybercrimes since the beginning of the pandemic</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -184,17 +208,6 @@ const CyberSecurity = () => {
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
-          </div>
-        </section>
-        
-        {/* Added second image at the bottom of the page */}
-        <section className="py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <img 
-              src="/lovable-uploads/31d85718-793a-48aa-b954-319f6747d7e9.png" 
-              alt="Cybersecurity protection" 
-              className="w-full rounded-lg shadow-md"
-            />
           </div>
         </section>
         
