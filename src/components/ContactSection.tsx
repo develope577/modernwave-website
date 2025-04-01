@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -14,6 +15,7 @@ const ContactSection = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,17 +48,23 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-    // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    // Show success message
-    alert("Thank you for your message! We'll get back to you soon.");
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      // Handle form submission logic here
+      console.log("Form submitted:", formData);
+      // Show success message
+      toast.success("Thank you for your message! We'll get back to you soon.");
+      // Reset form after submission
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   return (
@@ -200,8 +208,8 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button type="submit" className="gap-2">
-                Send Message
+              <Button type="submit" className="gap-2" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </Button>
             </form>

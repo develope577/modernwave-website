@@ -1,10 +1,28 @@
 
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Facebook, Linkedin, Twitter, Instagram, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { subscribeToNewsletter } from "@/services/newsletterService";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      await subscribeToNewsletter(email);
+      // Reset form on success
+      setEmail("");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-[#0F172A] text-white">
       <div className="bg-[#6366F1] py-12">
@@ -14,16 +32,24 @@ const Footer = () => {
             <p className="mb-6 max-w-md">
               Subscribe to our newsletter for the latest tech insights and product updates.
             </p>
-            <div className="flex w-full max-w-md gap-2">
+            <form onSubmit={handleSubscribe} className="flex w-full max-w-md gap-2">
               <Input
                 type="email"
                 placeholder="Your email address"
                 className="bg-white/20 border-white/20 placeholder:text-white/60 text-white"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
-              <Button variant="secondary" className="bg-white text-[#6366F1] hover:bg-white/90">
-                Subscribe
+              <Button 
+                type="submit" 
+                variant="secondary" 
+                className="bg-white text-[#6366F1] hover:bg-white/90"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </Button>
-            </div>
+            </form>
             <p className="text-xs mt-2 text-white/70">
               By signing up, you're agreeing to our privacy policy.
             </p>
