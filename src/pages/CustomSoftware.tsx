@@ -1,21 +1,18 @@
-
 import { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Server, Database } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Code, ArrowRight } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
+import { Link } from "react-router-dom";
 
 const CustomSoftware = () => {
   const processRef = useRef<HTMLDivElement>(null);
-  
+
   const scrollToProcess = () => {
-    if (processRef.current) {
-      processRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    processRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -34,11 +31,14 @@ const CustomSoftware = () => {
                   <span className="gradient-text block">Development</span>
                 </h1>
                 <p className="mt-6 text-lg text-gray-600">
-                  Tailor-made software solutions designed specifically for your unique business requirements and industry challenges.
+                  Tailor-made software solutions designed specifically for your unique business requirements and industry challenges. We build flexible, scalable, and user-friendly applications.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Button size="lg" className="gap-2 group" asChild>
-                    <Link to="/contact">Start Your Project</Link>
+                    <Link to="/contact">
+                      Start Your Project
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="gap-2 group" onClick={scrollToProcess}>
                     Explore Our Process
@@ -49,8 +49,8 @@ const CustomSoftware = () => {
               
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                  alt="Custom software development"
+                  src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                  alt="Software development team"
                   className="rounded-lg shadow-xl"
                 />
               </div>
@@ -58,49 +58,132 @@ const CustomSoftware = () => {
           </div>
         </section>
         
+        {/* Development Process Section */}
+        <section className="py-20" ref={processRef}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Our Development Process
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                We follow a proven, transparent development methodology to ensure your custom software meets all requirements and exceeds expectations.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
+                  1
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Discovery & Planning</h3>
+                <p className="text-gray-600">
+                  We work closely with you to understand your business needs, goals, and requirements before creating a detailed project roadmap.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
+                  2
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Design & Architecture</h3>
+                <p className="text-gray-600">
+                  Our team designs the optimal solution architecture and user experience, ensuring a scalable and intuitive software solution.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
+                  3
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Development & Testing</h3>
+                <p className="text-gray-600">
+                  Using agile methodologies, we develop your solution with frequent reviews and rigorous testing to ensure quality and functionality.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
+                  4
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Deployment & Support</h3>
+                <p className="text-gray-600">
+                  We handle the smooth deployment of your software and provide ongoing support, maintenance, and updates as needed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* Services Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
                 Custom Software Services
               </h2>
               <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                From concept to deployment, we develop software that perfectly aligns with your business needs.
+                From web and mobile applications to enterprise software and integrations, we build solutions that drive business growth.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
-                  <Code size={24} />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Web Applications</h3>
                 <p className="text-gray-600 mb-6">
-                  Responsive, scalable web applications built with modern frameworks that deliver exceptional user experiences.
+                  Responsive, feature-rich web applications that work seamlessly across devices and provide excellent user experiences.
                 </p>
               </div>
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                    <path d="M12 18h.01" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Mobile Applications</h3>
                 <p className="text-gray-600 mb-6">
-                  Native and cross-platform mobile apps for iOS and Android that provide seamless experiences across devices.
+                  Native and cross-platform mobile apps that deliver superior performance and engaging experiences for your customers.
                 </p>
               </div>
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
-                  <Server size={24} />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Software</h3>
+                <p className="text-gray-600 mb-6">
+                  Robust, secure, and scalable enterprise solutions that streamline operations and improve business efficiency.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">API Development</h3>
                 <p className="text-gray-600 mb-6">
-                  Robust, secure APIs that enable seamless integration between systems and extend your software capabilities.
+                  Custom API development that enables seamless integration between your systems and third-party applications.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 12v5h16a2 2 0 0 1 0 4H3v-4"/></svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Legacy System Modernization</h3>
+                <p className="text-gray-600 mb-6">
+                  Transform outdated systems into modern, efficient applications without losing critical functionality or data.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2H2v10h10V2Z"/><path d="M22 12h-10v10h10V12Z"/><path d="M12 12H2v10h10V12Z"/><path d="M22 2h-10v10h10V2Z"/></svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Database Solutions</h3>
+                <p className="text-gray-600 mb-6">
+                  Custom database design, development, and optimization to ensure your data is secure, accessible, and efficiently managed.
                 </p>
               </div>
             </div>
@@ -108,139 +191,84 @@ const CustomSoftware = () => {
         </section>
         
         {/* New Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
-                Tailored Solutions for Your Business
+                Transforming Your Business With Technology
               </h2>
               <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                Our custom software development service is designed to address the specific challenges your business faces.
+                We help organizations achieve their goals through innovative custom software solutions.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md">
+                <h3 className="text-2xl font-semibold mb-4">Future-Proof Technology</h3>
+                <p className="text-gray-600 mb-6">
+                  Our custom software solutions are built with scalability and future growth in mind. We use modern, proven technologies that ensure your software remains relevant and adaptable as your business evolves and market conditions change.
+                </p>
+                <p className="text-gray-600">
+                  By investing in custom software, you're not just solving today's challenges—you're building a foundation that can grow and adapt to tomorrow's opportunities, giving your business a competitive advantage for years to come.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md">
+                <h3 className="text-2xl font-semibold mb-4">ROI-Driven Development</h3>
+                <p className="text-gray-600 mb-6">
+                  We understand that software is an investment, and every investment should deliver measurable returns. Our development process is focused on creating solutions that directly address your business challenges, streamline operations, and create new opportunities for growth and revenue.
+                </p>
+                <p className="text-gray-600">
+                  Throughout the development process, we maintain clear communication about how each feature and function ties back to your business objectives, ensuring that the final product delivers real, quantifiable value to your organization.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Case Study */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="p-8 md:p-12">
-                  <h3 className="text-2xl font-bold mb-4">Why Custom Software?</h3>
-                  <p className="text-gray-600 mb-4">
-                    Off-the-shelf software often requires businesses to adapt their processes to the software's capabilities. Custom software is built around your specific needs and workflows, enhancing efficiency and eliminating unnecessary features.
+                  <span className="text-sm font-medium text-purple-600 bg-purple-50 px-4 py-1.5 rounded-full">Success Story</span>
+                  <h3 className="text-2xl font-bold mt-4">Healthcare Provider Portal</h3>
+                  <p className="text-gray-600 mt-4">
+                    We developed a comprehensive patient management system for a healthcare network, enabling secure access to medical records, appointment scheduling, and billing information.
                   </p>
-                  <p className="text-gray-600">
-                    Our team specializes in creating solutions that grow with your business, providing ongoing support and adding new features as your requirements evolve, ensuring your technology investments deliver long-term value.
-                  </p>
+                  <ul className="mt-6 space-y-3">
+                    <li className="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span className="text-gray-700">Reduced administrative workload by 65%</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span className="text-gray-700">Improved patient satisfaction scores by 42%</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span className="text-gray-700">HIPAA-compliant with bank-level security</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span className="text-gray-700">Seamless integration with existing systems</span>
+                    </li>
+                  </ul>
+                  <Button className="mt-8 gap-2 group">
+                    Read Full Case Study
+                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </Button>
                 </div>
-                <div className="order-first md:order-last">
-                  <img 
-                    src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                    alt="Custom software development"
+                <div className="bg-purple-50 flex items-center justify-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                    alt="Healthcare app interface"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        
-        {/* Process Section */}
-        <section ref={processRef} id="our-development-process" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display">
-                Our Development Process
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                A systematic approach to custom software development that ensures quality, efficiency, and alignment with your business goals.
-              </p>
-            </div>
-            
-            <div className="space-y-12">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <div className="md:col-span-1 flex justify-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">1</div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-xl font-semibold">Discovery & Analysis</h3>
-                </div>
-                <div className="md:col-span-8">
-                  <p className="text-gray-600">
-                    We start by understanding your business objectives, user needs, and technical requirements through interviews, workshops, and research to build a comprehensive project foundation.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <div className="md:col-span-1 flex justify-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">2</div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-xl font-semibold">Design & Planning</h3>
-                </div>
-                <div className="md:col-span-8">
-                  <p className="text-gray-600">
-                    We create detailed technical specifications, architectural designs, and user experience prototypes to visualize the solution before development begins.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <div className="md:col-span-1 flex justify-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">3</div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-xl font-semibold">Development</h3>
-                </div>
-                <div className="md:col-span-8">
-                  <p className="text-gray-600">
-                    Our skilled developers build your solution using the latest technologies and best practices, with regular code reviews and continuous integration to ensure quality.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <div className="md:col-span-1 flex justify-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">4</div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-xl font-semibold">Testing & QA</h3>
-                </div>
-                <div className="md:col-span-8">
-                  <p className="text-gray-600">
-                    Comprehensive testing including functional, performance, security, and user acceptance testing ensures your software works flawlessly before deployment.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <div className="md:col-span-1 flex justify-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">5</div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-xl font-semibold">Deployment & Support</h3>
-                </div>
-                <div className="md:col-span-8">
-                  <p className="text-gray-600">
-                    We manage the deployment process to minimize disruption and provide ongoing maintenance, support, and updates to keep your software running optimally.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">Ready to Build Your Custom Solution?</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Let's discuss your project requirements and create a roadmap for your custom software solution.
-            </p>
-            <Button size="lg" className="gap-2 group" asChild>
-              <Link to="/contact">
-                Start Your Project
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </Button>
           </div>
         </section>
         

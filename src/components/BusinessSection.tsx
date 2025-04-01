@@ -43,7 +43,6 @@ const BusinessSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 hover:shadow-md hover:scale-[1.01] transition-all">
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-100 text-blue-600 mb-6">
               <Server size={24} />
@@ -71,7 +70,6 @@ const BusinessSection = () => {
               </svg>
             </Link>
           </div>
-          
           
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 hover:shadow-md hover:scale-[1.01] transition-all">
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 mb-6">
@@ -101,7 +99,6 @@ const BusinessSection = () => {
             </Link>
           </div>
           
-          
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300 hover:shadow-md hover:scale-[1.01] transition-all">
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
               <Code size={24} />
@@ -129,7 +126,6 @@ const BusinessSection = () => {
               </svg>
             </Link>
           </div>
-          
           
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400 hover:shadow-md hover:scale-[1.01] transition-all">
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
