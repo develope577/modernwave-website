@@ -190,7 +190,43 @@ const CustomSoftware = () => {
           </div>
         </section>
         
-        {/* New Section */}
+        {/* Technology Excellence Section - New Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Technology Excellence & Innovation
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                We leverage cutting-edge technologies and industry best practices to deliver exceptional software solutions.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="bg-blue-50 rounded-xl p-8">
+                <h3 className="text-2xl font-semibold mb-4">Modern Tech Stack</h3>
+                <p className="text-gray-600 mb-6">
+                  Our development team stays at the forefront of technology trends, utilizing the most appropriate and effective tech stack for each project. We carefully select technologies that balance innovation with stability, ensuring your software remains maintainable and extensible for years to come.
+                </p>
+                <p className="text-gray-600">
+                  Whether your project requires cloud-native architecture, progressive web applications, or complex data processing capabilities, we have the expertise to implement solutions using proven, enterprise-grade technologies that align with your business goals.
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 rounded-xl p-8">
+                <h3 className="text-2xl font-semibold mb-4">Collaborative Development Approach</h3>
+                <p className="text-gray-600 mb-6">
+                  We believe the best software is created through close collaboration between developers and business stakeholders. Our agile development methodology emphasizes regular communication, iterative development cycles, and continuous feedback to ensure the final product truly addresses your business needs.
+                </p>
+                <p className="text-gray-600">
+                  Throughout the development process, you'll have visibility into progress through regular demos, sprint reviews, and transparent project management tools. This collaborative approach not only ensures alignment with your vision but also allows for flexibility and adaptation as requirements evolve.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Transforming Your Business Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
