@@ -98,7 +98,7 @@ const BusinessIntelligence = () => {
           </div>
         </section>
 
-        {/* New Section with Design Image and Blue Border */}
+        {/* Design section with blue border */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-2 border-blue-500 rounded-xl overflow-hidden shadow-lg">
@@ -191,53 +191,6 @@ const BusinessIntelligence = () => {
                 <p className="text-gray-600 mb-6">
                   Seamlessly connect all your data sources into a centralized system, providing a comprehensive view of your business operations.
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Case Study Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display">
-                Success Stories
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                See how our business intelligence solutions have helped organizations transform their data into strategic assets.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <span className="text-sm font-medium text-indigo-600 bg-indigo-50 px-4 py-1.5 rounded-full">Case Study</span>
-                  <h3 className="text-2xl font-bold mt-4">Retail Chain Analytics Transformation</h3>
-                  <p className="text-gray-600 mt-4">
-                    A multi-location retail business struggling with inventory management and sales forecasting implemented our BI solution, resulting in a 35% reduction in overstock and a 28% increase in sales through data-driven decision making.
-                  </p>
-                  <div className="mt-6 space-y-4">
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Integrated 5 different data sources</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Custom inventory forecasting model</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Real-time sales performance dashboards</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <img
-                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Retail analytics dashboard"
-                    className="rounded-lg shadow-md"
-                  />
-                </div>
               </div>
             </div>
           </div>
