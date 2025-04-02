@@ -77,7 +77,7 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Why It Matters Section - Updated with smaller cards */}
+        {/* Why It Matters Section - Updated with border and smaller cards */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -86,7 +86,7 @@ const CyberSecurity = () => {
               </h2>
             </div>
             
-            <div className="max-w-3xl mx-auto space-y-8">
+            <div className="max-w-3xl mx-auto space-y-8 border border-gray-200 rounded-xl p-8 shadow-sm">
               <p className="text-center text-lg text-gray-600">
                 In today's interconnected digital landscape, cybersecurity is not just an IT concern but a fundamental business risk that affects organizations of all sizes. As cyber threats continue to evolve in sophistication and scale, businesses must adopt comprehensive security strategies to protect their critical assets, maintain customer trust, and ensure operational continuity.
               </p>
@@ -95,23 +95,23 @@ const CyberSecurity = () => {
                 The cost of cybersecurity breaches extends far beyond immediate financial losses, affecting brand reputation, customer relationships, and competitive positioning. By implementing robust security measures, organizations can not only defend against current threats but also build resilience against emerging risks in an increasingly complex threat landscape.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                <div className="bg-red-50 rounded-lg p-6 text-center">
-                  <h3 className="text-3xl font-bold text-red-600 mb-2">60%</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+                <div className="bg-red-50 rounded-lg p-4 text-center">
+                  <h3 className="text-2xl font-bold text-red-600 mb-2">60%</h3>
                   <p className="text-gray-700 text-sm">
                     of small businesses close within 6 months of a significant cyber attack
                   </p>
                 </div>
                 
-                <div className="bg-red-50 rounded-lg p-6 text-center">
-                  <h3 className="text-3xl font-bold text-red-600 mb-2">$4.35M</h3>
+                <div className="bg-red-50 rounded-lg p-4 text-center">
+                  <h3 className="text-2xl font-bold text-red-600 mb-2">$4.35M</h3>
                   <p className="text-gray-700 text-sm">
                     average cost of a data breach in 2022, a record high
                   </p>
                 </div>
                 
-                <div className="bg-red-50 rounded-lg p-6 text-center">
-                  <h3 className="text-3xl font-bold text-red-600 mb-2">300%</h3>
+                <div className="bg-red-50 rounded-lg p-4 text-center">
+                  <h3 className="text-2xl font-bold text-red-600 mb-2">300%</h3>
                   <p className="text-gray-700 text-sm">
                     increase in reported cybercrimes since the beginning of the pandemic
                   </p>

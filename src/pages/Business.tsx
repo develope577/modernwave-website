@@ -468,9 +468,11 @@ const Business = () => {
             </div>
             
             <div className="mt-16 text-center">
-              <Button size="lg" className="gap-2 group">
-                Schedule a Consultation
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              <Button size="lg" className="gap-2 group" asChild>
+                <Link to="/contact">
+                  Schedule a Consultation
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>

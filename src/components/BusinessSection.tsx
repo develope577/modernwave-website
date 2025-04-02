@@ -164,7 +164,9 @@ const BusinessSection = () => {
                 Our experts will work with you to understand your specific needs and design the perfect solution for your business challenges.
               </p>
               <Button size="lg" asChild>
-                <Link to="/contact">Schedule Consultation</Link>
+                <Link to="/contact">
+                  Schedule Consultation
+                </Link>
               </Button>
             </div>
             <div className="flex justify-center md:justify-end">

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight, Smartphone, Home, ShieldCheck, Laptop, Headphones, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -48,13 +49,17 @@ const Consumer = () => {
                   Discover intuitive, user-friendly technology solutions designed to simplify your daily activities and enhance your digital experience.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group bg-green-600 hover:bg-green-700">
-                    Explore Products
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" className="gap-2 group bg-green-600 hover:bg-green-700" asChild>
+                    <Link to="/contact">
+                      Explore Products
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group text-green-600 border-green-600 hover:bg-green-50">
-                    View Applications
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" variant="outline" className="gap-2 group text-green-600 border-green-600 hover:bg-green-50" asChild>
+                    <Link to="/contact">
+                      View Applications
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -433,9 +438,11 @@ const Consumer = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <Button className="gap-2 group bg-green-600 hover:bg-green-700">
-                    Discover All Features
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button className="gap-2 group bg-green-600 hover:bg-green-700" asChild>
+                    <Link to="/contact">
+                      Discover All Features
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -543,8 +550,10 @@ const Consumer = () => {
                 </p>
               </div>
               <div className="shrink-0">
-                <Button size="lg" variant="secondary" className="bg-white text-green-600 hover:bg-white/90 border-none">
-                  Get Started Today
+                <Button size="lg" variant="secondary" className="bg-white text-green-600 hover:bg-white/90 border-none" asChild>
+                  <Link to="/contact">
+                    Get Started Today
+                  </Link>
                 </Button>
               </div>
             </div>
