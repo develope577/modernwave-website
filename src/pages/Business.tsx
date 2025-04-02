@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ArrowRight, BarChart, Code, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,7 +41,6 @@ const Business = () => {
       <Navbar />
       
       <main className="flex-grow pt-16">
-        {/* Hero Section */}
         <section className="bg-blue-50 py-24" ref={heroRef}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -79,7 +77,6 @@ const Business = () => {
           </div>
         </section>
         
-        {/* Services Section */}
         <section className="py-20" ref={solutionsRef} id="comprehensive-business-solutions">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -92,7 +89,6 @@ const Business = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {/* Business Intelligence */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 mb-6">
                   <BarChart size={24} />
@@ -121,7 +117,6 @@ const Business = () => {
                 </Link>
               </div>
               
-              {/* Custom Software Development */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-100 text-purple-600 mb-6">
                   <Code size={24} />
@@ -150,7 +145,6 @@ const Business = () => {
                 </Link>
               </div>
               
-              {/* IT Consulting & Strategy */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-amber-100 text-amber-600 mb-6">
                   <Users size={24} />
@@ -179,7 +173,6 @@ const Business = () => {
                 </Link>
               </div>
               
-              {/* Cybersecurity */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
                   <Shield size={24} />
@@ -211,7 +204,6 @@ const Business = () => {
           </div>
         </section>
         
-        {/* Methodology Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -297,7 +289,6 @@ const Business = () => {
           </div>
         </section>
         
-        {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -478,10 +469,8 @@ const Business = () => {
           </div>
         </section>
         
-        {/* Case Studies */}
         <TestimonialsSection />
         
-        {/* Contact Section */}
         <ContactSection />
       </main>
       
