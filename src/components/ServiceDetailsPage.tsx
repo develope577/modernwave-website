@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -32,6 +33,8 @@ const ServiceDetailsPage = ({
   benefits,
   ctaText = "Get a Free Consultation",
 }: ServiceDetailsProps) => {
+  const [activeStep, setActiveStep] = useState(0);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -43,19 +46,44 @@ const ServiceDetailsPage = ({
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
           </div>
 
-          {/* Process Section */}
+          {/* Process Section - Updated with interactive timeline */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8 text-center">{processTitle}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {process.map((step, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
-                    <span className="font-semibold">{index + 1}</span>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 z-0"></div>
+              
+              {/* Timeline steps */}
+              <div className="space-y-12 md:space-y-0 relative z-10">
+                {process.map((step, index) => (
+                  <div 
+                    key={index} 
+                    className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""} md:items-center mb-8`}
+                    onMouseEnter={() => setActiveStep(index)}
+                  >
+                    <div className="md:w-1/2 flex justify-center py-4">
+                      <div className={`p-6 rounded-xl ${activeStep === index ? "bg-blue-100 text-blue-600 scale-110" : "bg-gray-100 text-gray-600 opacity-80"} transform transition-all duration-300`}>
+                        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary mb-4 mx-auto">
+                          <span className="font-semibold">{index + 1}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="md:w-1/2 relative flex flex-col items-center md:items-start">
+                      {/* Timeline dot */}
+                      <div className="hidden md:flex absolute top-1/2 transform -translate-y-1/2 left-0 md:left-auto md:right-0 z-10">
+                        <div className={`w-6 h-6 rounded-full border-4 border-white ${activeStep === index ? "bg-blue-600" : "bg-gray-300"} transform transition-all duration-300 ${index % 2 === 0 ? "md:translate-x-3" : "md:-translate-x-3"}`}></div>
+                      </div>
+
+                      {/* Content card */}
+                      <div className={`bg-white p-6 rounded-xl shadow-md ml-8 md:ml-0 ${index % 2 === 0 ? "md:mr-8 md:text-right" : "md:ml-8"} ${activeStep === index ? "border-blue-500 border-2" : "border border-gray-100"} transition-all duration-300 w-full`}>
+                        <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
+                        <p className="text-gray-600">{step.description}</p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </section>
 
@@ -94,6 +122,18 @@ const ServiceDetailsPage = ({
           </div>
         </div>
       </main>
+
+      {/* ADA Affiliated Button */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <div className="flex items-center bg-white rounded-full shadow-lg px-4 py-2 border border-gray-200">
+          <img 
+            src="/lovable-uploads/5d4acd95-6fa5-4ed4-a366-2f825d97e0fc.png"
+            alt="ADA Affiliated" 
+            className="h-6 mr-2"
+          />
+          <span className="text-blue-600 font-medium">ADA Affiliated</span>
+        </div>
+      </div>
 
       <Footer />
     </div>
