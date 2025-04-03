@@ -1,11 +1,12 @@
 
 import { useEffect, useRef } from "react";
-import { ArrowRight, Smartphone, Home, ShieldCheck, Laptop, Headphones, Zap } from "lucide-react";
+import { ArrowRight, Smartphone, Home, ShieldCheck, Laptop, Headphones, Zap, Code, Pen, Database, Layers, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Consumer = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -93,17 +94,17 @@ const Consumer = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Smart home devices"
+                    alt="Full-Cycle App Development"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-4">
-                    <Home size={20} />
+                    <Code size={20} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Smart Home Integration</h3>
+                  <h3 className="text-xl font-semibold mb-3">Full-Cycle App Development</h3>
                   <p className="text-gray-600 mb-6">
-                    Connect and control your home devices with intuitive, voice-driven smart home solutions. Automate lighting, climate control, security, and entertainment systems.
+                    We provide end-to-end development services, from brainstorming and prototyping to full-scale deployment and post-launch support. Whether you have an idea or need an expert team to build your app from scratch, we handle everything—including coding, integrations, and performance optimization.
                   </p>
                   <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
                     Learn more
@@ -131,7 +132,7 @@ const Consumer = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Mobile application"
+                    alt="AI & Smart Features Integration"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -139,9 +140,9 @@ const Consumer = () => {
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-4">
                     <Smartphone size={20} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Mobile Applications</h3>
+                  <h3 className="text-xl font-semibold mb-3">AI & Smart Features Integration</h3>
                   <p className="text-gray-600 mb-6">
-                    Powerful apps designed to streamline activities, help you stay organized, and improve productivity. User-friendly interfaces with seamless device integration.
+                    We integrate AI-driven automation, chatbots, recommendation engines, and predictive analytics to enhance user experience. Our solutions allow apps to learn from user behavior to provide smart suggestions, automated workflows, and real-time data insights.
                   </p>
                   <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
                     Learn more
@@ -169,17 +170,17 @@ const Consumer = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1562813733-b31f0941b2b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Digital security"
+                    alt="User Experience & UI/UX Design"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-4">
-                    <ShieldCheck size={20} />
+                    <Pen size={20} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Digital Security</h3>
+                  <h3 className="text-xl font-semibold mb-3">User Experience & UI/UX Design</h3>
                   <p className="text-gray-600 mb-6">
-                    Protect your digital life with user-friendly yet powerful security solutions for all your devices. Includes identity protection and secure cloud backups.
+                    A great app isn't just about functionality—it's about an intuitive, seamless experience that keeps users engaged. Our design team creates visually appealing, easy-to-navigate interfaces that make apps enjoyable to use.
                   </p>
                   <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
                     Learn more
@@ -207,7 +208,7 @@ const Consumer = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Productivity software"
+                    alt="Cross-Platform Development"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -215,9 +216,9 @@ const Consumer = () => {
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-4">
                     <Laptop size={20} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Productivity Software</h3>
+                  <h3 className="text-xl font-semibold mb-3">Cross-Platform Development</h3>
                   <p className="text-gray-600 mb-6">
-                    Streamline your daily tasks and boost efficiency with our intuitive productivity tools designed for work, education, and personal organization.
+                    We develop apps for iOS, Android, and Web, ensuring a consistent experience across all devices. Whether it's a native, hybrid, or progressive web app (PWA), we tailor the solution to fit your audience and business goals.
                   </p>
                   <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
                     Learn more
@@ -245,17 +246,17 @@ const Consumer = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1520170350707-b2da59970118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Entertainment devices"
+                    alt="Secure & Scalable Cloud Solutions"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-4">
-                    <Headphones size={20} />
+                    <Database size={20} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Smart Entertainment</h3>
+                  <h3 className="text-xl font-semibold mb-3">Secure & Scalable Cloud Solutions</h3>
                   <p className="text-gray-600 mb-6">
-                    Elevate your entertainment experience with integrated audio, video, and streaming solutions that work seamlessly across all your devices.
+                    Your app needs to be fast, reliable, and scalable as your user base grows. We implement cloud infrastructure, secure data encryption, and efficient backend solutions to ensure high performance and data protection.
                   </p>
                   <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
                     Learn more
@@ -283,17 +284,17 @@ const Consumer = () => {
                 <div className="h-48 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Smart energy solutions"
+                    alt="E-Commerce & Payment Integrations"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100 text-green-600 mb-4">
-                    <Zap size={20} />
+                    <Layers size={20} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Energy Management</h3>
+                  <h3 className="text-xl font-semibold mb-3">E-Commerce & Payment Integrations</h3>
                   <p className="text-gray-600 mb-6">
-                    Smart energy solutions that help you optimize consumption, reduce utility bills, and minimize your environmental impact.
+                    For apps that require transactions, we integrate secure payment gateways, subscription management, and seamless checkout experiences to enhance user convenience while maintaining security compliance.
                   </p>
                   <a href="#" className="text-green-600 font-medium flex items-center gap-1 group">
                     Learn more
@@ -319,8 +320,181 @@ const Consumer = () => {
           </div>
         </section>
         
-        {/* Features Section */}
+        {/* How Our Services Work Section */}
         <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                How Our Services Work
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Our streamlined process ensures your app idea becomes reality with efficiency and quality at every step.
+              </p>
+            </div>
+            
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-200 hidden md:block"></div>
+              
+              {/* Step 1 */}
+              <div className="relative z-10 mb-12 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 md:ml-auto md:mr-0 max-w-md">
+                      <CardContent className="p-6">
+                        <div className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4 md:ml-auto md:mr-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                        </div>
+                        <h3 className="text-xl font-semibold mb-3">You start with an idea</h3>
+                        <p className="text-gray-600">
+                          Share your vision with us through consultation. We'll discuss requirements, audience, and goals to establish a clear roadmap.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  
+                  <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center z-10 mx-auto md:mx-0 mb-4 md:mb-0">
+                    <span className="font-bold">1</span>
+                  </div>
+                  
+                  <div className="md:w-1/2 hidden md:block"></div>
+                </div>
+              </div>
+              
+              {/* Arrow down */}
+              <div className="flex justify-center my-4 md:my-6">
+                <ArrowDown className="text-green-500 animate-bounce" />
+              </div>
+              
+              {/* Step 2 */}
+              <div className="relative z-10 mb-12 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 hidden md:block"></div>
+                  
+                  <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center z-10 mx-auto md:mx-0 mb-4 md:mb-0">
+                    <span className="font-bold">2</span>
+                  </div>
+                  
+                  <div className="md:w-1/2 md:pl-12">
+                    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 max-w-md">
+                      <CardContent className="p-6">
+                        <div className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4">
+                          <Pen size={24} />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-3">We design the UI/UX</h3>
+                        <p className="text-gray-600">
+                          Our designers create wireframes and prototypes focusing on intuitive navigation and engaging visual elements for your target audience.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Arrow down */}
+              <div className="flex justify-center my-4 md:my-6">
+                <ArrowDown className="text-green-500 animate-bounce" />
+              </div>
+              
+              {/* Step 3 */}
+              <div className="relative z-10 mb-12 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 md:ml-auto md:mr-0 max-w-md">
+                      <CardContent className="p-6">
+                        <div className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4 md:ml-auto md:mr-0">
+                          <Code size={24} />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-3">We develop the app</h3>
+                        <p className="text-gray-600">
+                          Our expert development team builds your app using the latest technologies and best practices, with regular progress updates.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  
+                  <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center z-10 mx-auto md:mx-0 mb-4 md:mb-0">
+                    <span className="font-bold">3</span>
+                  </div>
+                  
+                  <div className="md:w-1/2 hidden md:block"></div>
+                </div>
+              </div>
+              
+              {/* Arrow down */}
+              <div className="flex justify-center my-4 md:my-6">
+                <ArrowDown className="text-green-500 animate-bounce" />
+              </div>
+              
+              {/* Step 4 */}
+              <div className="relative z-10 mb-12 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 hidden md:block"></div>
+                  
+                  <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center z-10 mx-auto md:mx-0 mb-4 md:mb-0">
+                    <span className="font-bold">4</span>
+                  </div>
+                  
+                  <div className="md:w-1/2 md:pl-12">
+                    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 max-w-md">
+                      <CardContent className="p-6">
+                        <div className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4">
+                          <Smartphone size={24} />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-3">AI & integrations are added</h3>
+                        <p className="text-gray-600">
+                          We enhance your app with smart features, third-party integrations, and custom functionalities that make it stand out.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Arrow down */}
+              <div className="flex justify-center my-4 md:my-6">
+                <ArrowDown className="text-green-500 animate-bounce" />
+              </div>
+              
+              {/* Step 5 */}
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-right">
+                    <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 md:ml-auto md:mr-0 max-w-md">
+                      <CardContent className="p-6">
+                        <div className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4 md:ml-auto md:mr-0">
+                          <Database size={24} />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-3">Deployment & scaling</h3>
+                        <p className="text-gray-600">
+                          We launch your app, ensure smooth deployment, and provide ongoing support to help it grow with your user base.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  
+                  <div className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center z-10 mx-auto md:mx-0 mb-4 md:mb-0">
+                    <span className="font-bold">5</span>
+                  </div>
+                  
+                  <div className="md:w-1/2 hidden md:block"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-16">
+              <Button size="lg" className="gap-2 bg-green-600 hover:bg-green-700" asChild>
+                <Link to="/contact">
+                  Start Your Project Today
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+        
+        {/* Features Section */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
@@ -451,7 +625,7 @@ const Consumer = () => {
         </section>
         
         {/* How It Works Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">

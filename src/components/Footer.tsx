@@ -1,36 +1,10 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Linkedin, Twitter, Instagram, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-[#0F172A] text-white">
-      <div className="bg-[#6366F1] py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center">
-            <h3 className="text-2xl font-semibold mb-6">Stay Updated</h3>
-            <p className="mb-6 max-w-md">
-              Subscribe to our newsletter for the latest tech insights and product updates.
-            </p>
-            <div className="flex w-full max-w-md gap-2">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                className="bg-white/20 border-white/20 placeholder:text-white/60 text-white"
-              />
-              <Button variant="secondary" className="bg-white text-[#6366F1] hover:bg-white/90">
-                Subscribe
-              </Button>
-            </div>
-            <p className="text-xs mt-2 text-white/70">
-              By signing up, you're agreeing to our privacy policy.
-            </p>
-          </div>
-        </div>
-      </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
