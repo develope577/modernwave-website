@@ -29,10 +29,14 @@ const contactInfoSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
   phone: z.string().optional(),
   companyName: z.string().optional(),
+  consultationType: z.enum(["business", "product"], {
+    required_error: "Please select what you need help with",
+  }),
 });
 
 // Schema for business tech solutions
 const businessTechSchema = z.object({
+  consultationType: z.literal("business"),
   industry: z.string().min(1, { message: "Please select an industry" }),
   challenges: z.array(z.string()).min(1, { message: "Please select at least one challenge" }),
   services: z.array(z.string()).min(1, { message: "Please select at least one service" }),
@@ -41,6 +45,7 @@ const businessTechSchema = z.object({
 
 // Schema for app/product development
 const productDevSchema = z.object({
+  consultationType: z.literal("product"),
   ideaClarity: z.enum(["clear", "guidance"], { required_error: "Please select an option" }),
   productType: z.string().min(1, { message: "Please select a product type" }),
   targetAudience: z.string().min(1, { message: "Please select a target audience" }),
@@ -48,26 +53,14 @@ const productDevSchema = z.object({
   additionalDetails: z.string().optional(),
 });
 
-// Step 2 schema based on selection
+// Create a discriminated union schema for step 2
 const step2Schema = z.discriminatedUnion("consultationType", [
-  z.object({
-    consultationType: z.literal("business"),
-    ...businessTechSchema.shape,
-  }),
-  z.object({
-    consultationType: z.literal("product"),
-    ...productDevSchema.shape,
-  }),
+  businessTechSchema,
+  productDevSchema,
 ]);
 
-// Combined schema for the whole form
-const formSchema = contactInfoSchema.merge(z.object({
-  consultationType: z.enum(["business", "product"], {
-    required_error: "Please select what you need help with",
-  }),
-})).merge(step2Schema);
-
-type FormValues = z.infer<typeof formSchema>;
+// We use a type to represent the shape of the form data
+type FormValues = z.infer<typeof businessTechSchema> | z.infer<typeof productDevSchema>;
 
 const industries = [
   { value: "retail", label: "Retail" },
@@ -123,8 +116,9 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
   
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formType === "business" ? businessTechSchema : productDevSchema) as any,
     defaultValues: {
+      consultationType: undefined,
       fullName: "",
       email: "",
       phone: "",
@@ -142,7 +136,7 @@ const ConsultationPage = () => {
     console.log("Form submitted:", data);
     
     // Show success message
-    toast.success("Consultation request submitted successfully! We'll contact you soon.", {
+    toast.success("Thank you! Your request has been received. Our team will contact you shortly.", {
       duration: 5000,
     });
     
@@ -159,7 +153,7 @@ const ConsultationPage = () => {
   
   const nextStep = () => {
     if (formStep === 1) {
-      const { fullName, email, consultationType } = form.getValues();
+      const { fullName, email, consultationType } = form.getValues() as any;
       
       // Validate first step fields
       if (!fullName || !email || !consultationType) {
@@ -679,3 +673,4 @@ const ConsultationPage = () => {
 };
 
 export default ConsultationPage;
+

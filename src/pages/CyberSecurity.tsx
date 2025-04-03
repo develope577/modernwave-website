@@ -52,7 +52,7 @@ const CyberSecurity = () => {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700" asChild>
-                    <Link to="/contact">
+                    <Link to="/consultation">
                       Get Security Assessment
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
@@ -259,7 +259,7 @@ const CyberSecurity = () => {
                 
                 <div className="mt-8">
                   <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700" asChild>
-                    <Link to="/contact">
+                    <Link to="/consultation">
                       Request Security Assessment
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
@@ -292,7 +292,7 @@ const CyberSecurity = () => {
               className="gap-2 group bg-blue-600 hover:bg-blue-700" 
               asChild
             >
-              <Link to="/contact">
+              <Link to="/consultation">
                 Request Security Assessment
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -309,3 +309,4 @@ const CyberSecurity = () => {
 };
 
 export default CyberSecurity;
+
