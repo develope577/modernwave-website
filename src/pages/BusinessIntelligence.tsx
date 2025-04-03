@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { BarChart, ArrowRight, Target, Network, Flag } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
+import { Link } from "react-router-dom";
 
 const BusinessIntelligence = () => {
   return (
@@ -27,9 +28,11 @@ const BusinessIntelligence = () => {
                   Transform your raw data into actionable insights with our advanced analytics, dashboards, and reporting tools customized for your business needs.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group">
-                    Schedule Consultation
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button size="lg" className="gap-2 group" asChild>
+                    <Link to="/consultation">
+                      Schedule Consultation
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="gap-2 group">
                     Explore Case Studies

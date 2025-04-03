@@ -460,7 +460,7 @@ const Business = () => {
             
             <div className="mt-16 text-center">
               <Button size="lg" className="gap-2 group" asChild>
-                <Link to="/contact#contact-form">
+                <Link to="/consultation">
                   Schedule a Consultation
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>

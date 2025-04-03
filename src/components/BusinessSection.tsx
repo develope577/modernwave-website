@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { Server, LineChart, Code, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -163,7 +164,7 @@ const BusinessSection = () => {
                 Our experts will work with you to understand your specific needs and design the perfect solution for your business challenges.
               </p>
               <Button size="lg" asChild>
-                <Link to="/contact#contact-form">
+                <Link to="/consultation">
                   Schedule Consultation
                 </Link>
               </Button>
