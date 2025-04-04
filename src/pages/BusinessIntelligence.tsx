@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -100,44 +101,18 @@ const BusinessIntelligence = () => {
           </div>
         </section>
 
-        {/* Design section with blue border - MODIFIED: Removed image */}
+        {/* Design section with blue border - MODIFIED: Removed specific points */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-2 border-blue-500 rounded-xl overflow-hidden shadow-lg">
               <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-12 text-white">
                 <h2 className="text-3xl font-bold mb-6">Advanced Analytics & Insights</h2>
-                <p className="text-lg mb-6">
+                <p className="text-lg mb-4">
                   Our business intelligence solutions transform complex data into clear, actionable insights that drive better decision-making and business outcomes.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="bg-blue-400/30 rounded-full p-1">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span>Real-time dashboards and reporting</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="bg-blue-400/30 rounded-full p-1">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span>Predictive analytics and forecasting</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="bg-blue-400/30 rounded-full p-1">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span>Data visualization and trend analysis</span>
-                  </li>
-                </ul>
-                <Button className="mt-8 bg-white text-blue-700 hover:bg-blue-50">
-                  Learn More
-                </Button>
+                <p className="text-lg">
+                  By leveraging cutting-edge analytics technology, we help your organization navigate through data complexity, identify key patterns, and make strategic decisions with confidence and precision.
+                </p>
               </div>
             </div>
           </div>

@@ -1,10 +1,10 @@
+
 import { useEffect, useRef } from "react";
 import { ArrowRight, BarChart, Code, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 
 const Business = () => {
@@ -58,7 +58,7 @@ const Business = () => {
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                   <Button size="lg" variant="outline" className="gap-2 group" asChild>
-                    <Link to="/contact">
+                    <Link to="/consultation">
                       Book a Consultation
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
@@ -468,8 +468,6 @@ const Business = () => {
             </div>
           </div>
         </section>
-        
-        <TestimonialsSection />
         
         <ContactSection />
       </main>

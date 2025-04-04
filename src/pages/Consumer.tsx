@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ConsumerServicesGrid from "@/components/ConsumerServicesGrid";
 import ServiceWorkflow from "@/components/ServiceWorkflow";
+import ConsumerFeatureSection from "@/components/ConsumerFeatureSection";
 
 const Consumer = () => {
   return (
@@ -23,7 +24,7 @@ const Consumer = () => {
                 Innovative technology designed to enhance everyday experiences. Our consumer-focused solutions combine cutting-edge technology with intuitive design.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
+                <Button asChild size="lg" variant="green">
                   <Link to="/consultation">Get Started</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
@@ -55,6 +56,9 @@ const Consumer = () => {
           <ConsumerServicesGrid />
         </div>
       </section>
+      
+      {/* New Feature Section */}
+      <ConsumerFeatureSection />
       
       {/* How Our Services Work Section */}
       <section className="py-20 bg-green-50">
