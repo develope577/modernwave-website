@@ -88,7 +88,7 @@ const ServiceDetailsPage = ({
           </section>
 
           {/* Why Choose Us Section */}
-          <section className="mb-16 bg-gray-50 rounded-2xl p-8">
+          <section className="mb-16 bg-gray-50 rounded-2xl p-8 w-full">
             <h2 className="text-2xl font-bold mb-8 text-center">{benefitsTitle}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (

@@ -184,4 +184,3 @@ const BusinessSection = () => {
 };
 
 export default BusinessSection;
-
