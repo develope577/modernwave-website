@@ -46,7 +46,7 @@ const ServiceDetailsPage = ({
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
           </div>
 
-          {/* Process Section - Updated with interactive timeline */}
+          {/* Process Section - Interactive timeline */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-8 text-center">{processTitle}</h2>
             <div className="relative">
@@ -62,7 +62,7 @@ const ServiceDetailsPage = ({
                     onMouseEnter={() => setActiveStep(index)}
                   >
                     <div className="md:w-1/2 flex justify-center py-4">
-                      <div className={`p-6 rounded-xl ${activeStep === index ? "bg-blue-100 text-blue-600 scale-110" : "bg-gray-100 text-gray-600 opacity-80"} transform transition-all duration-300`}>
+                      <div className={`p-6 rounded-xl ${activeStep === index ? "bg-green-100 text-green-600 scale-110" : "bg-gray-100 text-gray-600 opacity-80"} transform transition-all duration-300`}>
                         <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-primary mb-4 mx-auto">
                           <span className="font-semibold">{index + 1}</span>
                         </div>
@@ -72,11 +72,11 @@ const ServiceDetailsPage = ({
                     <div className="md:w-1/2 relative flex flex-col items-center md:items-start">
                       {/* Timeline dot */}
                       <div className="hidden md:flex absolute top-1/2 transform -translate-y-1/2 left-0 md:left-auto md:right-0 z-10">
-                        <div className={`w-6 h-6 rounded-full border-4 border-white ${activeStep === index ? "bg-blue-600" : "bg-gray-300"} transform transition-all duration-300 ${index % 2 === 0 ? "md:translate-x-3" : "md:-translate-x-3"}`}></div>
+                        <div className={`w-6 h-6 rounded-full border-4 border-white ${activeStep === index ? "bg-green-600" : "bg-gray-300"} transform transition-all duration-300 ${index % 2 === 0 ? "md:translate-x-3" : "md:-translate-x-3"}`}></div>
                       </div>
 
                       {/* Content card */}
-                      <div className={`bg-white p-6 rounded-xl shadow-md ml-8 md:ml-0 ${index % 2 === 0 ? "md:mr-8 md:text-right" : "md:ml-8"} ${activeStep === index ? "border-blue-500 border-2" : "border border-gray-100"} transition-all duration-300 w-full`}>
+                      <div className={`bg-white p-6 rounded-xl shadow-md ml-8 md:ml-0 ${index % 2 === 0 ? "md:mr-8 md:text-right" : "md:ml-8"} ${activeStep === index ? "border-green-500 border-2" : "border border-gray-100"} transition-all duration-300 w-full`}>
                         <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
                         <p className="text-gray-600">{step.description}</p>
                       </div>
@@ -116,7 +116,7 @@ const ServiceDetailsPage = ({
 
           {/* CTA Section */}
           <div className="text-center mb-12">
-            <Button asChild className="bg-blue-600 hover:bg-blue-700" size="lg">
+            <Button asChild className="bg-green-600 hover:bg-green-700" size="lg">
               <Link to="/consultation">{ctaText}</Link>
             </Button>
           </div>

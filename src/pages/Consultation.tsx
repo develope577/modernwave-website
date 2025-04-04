@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -31,7 +30,6 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// Define the schema for step 1
 const contactInfoSchema = z.object({
   fullName: z.string().min(1, { message: "Name is required" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
@@ -42,7 +40,6 @@ const contactInfoSchema = z.object({
   }),
 });
 
-// Schema for business tech solutions
 const businessSchema = contactInfoSchema.extend({
   consultationType: z.literal("business"),
   industry: z.string().min(1, { message: "Please select an industry" }),
@@ -51,7 +48,6 @@ const businessSchema = contactInfoSchema.extend({
   additionalDetails: z.string().optional(),
 });
 
-// Schema for app/product development
 const productSchema = contactInfoSchema.extend({
   consultationType: z.literal("product"),
   ideaClarity: z.enum(["clear", "guidance"], { required_error: "Please select an option" }),
@@ -61,7 +57,6 @@ const productSchema = contactInfoSchema.extend({
   additionalDetails: z.string().optional(),
 });
 
-// Combined schema using discriminated union
 const formSchema = z.discriminatedUnion("consultationType", [
   businessSchema,
   productSchema,
@@ -133,12 +128,10 @@ const ConsultationPage = () => {
       phone: "",
       companyName: "",
       consultationType: undefined,
-      // Business fields
       industry: "",
       challenges: [],
       services: [],
       additionalDetails: "",
-      // Product fields
       ideaClarity: undefined,
       productType: "",
       targetAudience: "",
@@ -172,7 +165,6 @@ const ConsultationPage = () => {
       
       const { fullName, email, consultationType } = form.getValues();
       
-      // Validate first step fields
       if (!fullName || !email || !consultationType) {
         return;
       }
@@ -198,7 +190,6 @@ const ConsultationPage = () => {
             </p>
           </div>
           
-          {/* Steps indicator */}
           <div className="mb-10">
             <div className="flex items-center justify-center">
               <div className="flex items-center">
