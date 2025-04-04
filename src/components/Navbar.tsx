@@ -77,7 +77,9 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <Button size="sm">Get Started</Button>
+            <Button asChild size="sm">
+              <Link to="/consultation">Get Started</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -130,7 +132,9 @@ const Navbar = () => {
               Contact
             </Link>
             <div className="pt-2 pb-4">
-              <Button className="w-full">Get Started</Button>
+              <Button asChild className="w-full">
+                <Link to="/consultation">Get Started</Link>
+              </Button>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const ConsumerFeatureSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           <div>
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
@@ -26,7 +26,7 @@ const ConsumerFeatureSection = () => {
             />
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 w-full">
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
                 <Check className="w-4 h-4 text-green-600" />

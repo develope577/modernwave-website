@@ -1,11 +1,21 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
+import { Link } from "react-router-dom";
 
 const ITConsulting = () => {
+  // Scroll function to scroll to a specific section
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -41,11 +51,13 @@ const ITConsulting = () => {
                   Strategic IT consulting to align your technology investments with business goals and create a roadmap for success. We help you make informed decisions about your technology future.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2 group">
-                    Book a Strategy Session
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <Button asChild size="lg" className="gap-2 group">
+                    <Link to="/consultation">
+                      Book a Strategy Session
+                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group">
+                  <Button size="lg" variant="outline" className="gap-2 group" onClick={() => scrollToSection('consulting-approach')}>
                     Our Consulting Approach
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
@@ -140,7 +152,7 @@ const ITConsulting = () => {
         </section>
         
         {/* Approach Section */}
-        <section className="py-20 bg-gray-50">
+        <section id="consulting-approach" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
@@ -275,62 +287,7 @@ const ITConsulting = () => {
           </div>
         </section>
         
-        {/* Case Study */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display">
-                Success Stories
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                See how our strategic IT consulting has helped organizations transform their technology landscape and achieve business goals.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="bg-amber-50 flex items-center justify-center">
-                  <img
-                    src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Business executive"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-8 md:p-12">
-                  <span className="text-sm font-medium text-amber-600 bg-amber-50 px-4 py-1.5 rounded-full">Case Study</span>
-                  <h3 className="text-2xl font-bold mt-4">Manufacturing Company Transformation</h3>
-                  <p className="text-gray-600 mt-4">
-                    A mid-sized manufacturing company was struggling with outdated systems and inefficient processes that were limiting growth. Our IT consulting team developed a comprehensive digital transformation strategy.
-                  </p>
-                  <ul className="mt-6 space-y-3">
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Reduced operational costs by 32%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Increased production capacity by 45%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Implemented IoT solutions for real-time monitoring</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Created a 3-year technology roadmap for continued growth</span>
-                    </li>
-                  </ul>
-                  <Button className="mt-8 gap-2 group">
-                    Read Full Case Study
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Contact Section */}
+        {/* Contact Section - Removed Case Study/Success Stories section */}
         <ContactSection />
       </main>
       
