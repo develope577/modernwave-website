@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -35,7 +35,7 @@ const CustomSoftware = () => {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Button size="lg" className="gap-2 group" asChild>
-                    <Link to="/contact">
+                    <Link to="/consultation">
                       Start Your Project
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
@@ -262,49 +262,19 @@ const CustomSoftware = () => {
           </div>
         </section>
         
-        {/* Case Study */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="p-8 md:p-12">
-                  <span className="text-sm font-medium text-purple-600 bg-purple-50 px-4 py-1.5 rounded-full">Success Story</span>
-                  <h3 className="text-2xl font-bold mt-4">Healthcare Provider Portal</h3>
-                  <p className="text-gray-600 mt-4">
-                    We developed a comprehensive patient management system for a healthcare network, enabling secure access to medical records, appointment scheduling, and billing information.
-                  </p>
-                  <ul className="mt-6 space-y-3">
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Reduced administrative workload by 65%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Improved patient satisfaction scores by 42%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">HIPAA-compliant with bank-level security</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600 mt-1"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                      <span className="text-gray-700">Seamless integration with existing systems</span>
-                    </li>
-                  </ul>
-                  <Button className="mt-8 gap-2 group">
-                    Read Full Case Study
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
-                </div>
-                <div className="bg-purple-50 flex items-center justify-center">
-                  <img
-                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                    alt="Healthcare app interface"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+        {/* New CTA Section replacing the Success Story section */}
+        <section className="py-20 bg-purple-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">Ready to Build Your Custom Software Solution?</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Let our team of experts help you develop the perfect software solution for your business needs. Contact us today to get started.
+            </p>
+            <Button size="lg" className="bg-purple-600 text-white hover:bg-purple-700 gap-2 group" asChild>
+              <Link to="/consultation">
+                Schedule a Consultation
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </section>
         
