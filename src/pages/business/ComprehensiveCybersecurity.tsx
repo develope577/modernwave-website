@@ -1,4 +1,3 @@
-
 import { useRef, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -100,7 +99,7 @@ const ComprehensiveCybersecurity = () => {
                         <div className="space-y-4">
                           <div className="flex">
                             <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Scan size={20} />
+                              <Search size={20} />
                             </div>
                             <div>
                               <h5 className="font-medium mb-2">Initial Scanning & Discovery</h5>
