@@ -110,7 +110,7 @@ const ITConsulting = () => {
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md hover:scale-[1.01] transition-all">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-amber-100 text-amber-600 mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 21H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h5"/><path d="M15 3h5c1.1 0 2 .9 2 2v14a2 2 0 0 1-2 2h-5"/><path d="M14 12H8"/><path d="m11 9-3 3 3 3"/><path d="M22 12h-6"/><path d="m17 9 3 3-3 3"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 21H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M15 3h5c1.1 0 2 .9 2 2v14a2 2 0 0 1-2 2h-5"/><path d="M14 12H8"/><path d="m11 9-3 3 3 3"/><path d="M22 12h-6"/><path d="m17 9 3 3-3 3"/></svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Digital Transformation</h3>
                 <p className="text-gray-600 mb-6">
@@ -287,7 +287,29 @@ const ITConsulting = () => {
           </div>
         </section>
         
-        {/* Contact Section - Removed Case Study/Success Stories section */}
+        {/* CTA Section */}
+        <section className="py-16 bg-amber-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+              Let's Build a Smarter IT Strategy
+            </h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+              Take the first step toward aligning your technology with your business goals.
+            </p>
+            <Button 
+              size="lg" 
+              className="gap-2 group bg-amber-600 hover:bg-amber-700" 
+              asChild
+            >
+              <Link to="/consultation">
+                Schedule Your Consultation
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+        
+        {/* Contact Section */}
         <ContactSection />
       </main>
       

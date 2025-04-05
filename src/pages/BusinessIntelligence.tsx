@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { BarChart, ArrowRight, Target, Network, Flag } from "lucide-react";
+import { BarChart, ArrowRight, Target, Network, Flag, Settings, Cpu } from "lucide-react";
 import ContactSection from "@/components/ContactSection";
 import { Link } from "react-router-dom";
 
@@ -33,10 +33,6 @@ const BusinessIntelligence = () => {
                       Schedule Consultation
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                  </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group">
-                    Explore Case Studies
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                 </div>
               </div>
@@ -101,7 +97,7 @@ const BusinessIntelligence = () => {
           </div>
         </section>
 
-        {/* Design section with blue border - MODIFIED: Removed specific points */}
+        {/* Design section with blue border */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-2 border-blue-500 rounded-xl overflow-hidden shadow-lg">
@@ -113,6 +109,65 @@ const BusinessIntelligence = () => {
                 <p className="text-lg">
                   By leveraging cutting-edge analytics technology, we help your organization navigate through data complexity, identify key patterns, and make strategic decisions with confidence and precision.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Smart Systems & Intelligent Automation - NEW SECTION */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Smart Systems & Intelligent Automation
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Boost Efficiency. Reduce Manual Work. Automate Growth.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-lg text-gray-600 mb-6">
+                  We help modern businesses thrive by integrating intelligent systems that automate repetitive tasks, streamline operations, and enhance decision-making. Our IT team specializes in creating custom automation workflows, integrating AI tools into your core systems, and ensuring everything works together seamlessly—from CRMs and ERPs to customer support platforms and logistics.
+                </p>
+                <p className="text-lg text-gray-600 mb-8">
+                  Whether you're a startup scaling fast or an enterprise needing more agility, our solutions deliver smart performance at scale.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 shrink-0">
+                      <Settings size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">Process Automation</h3>
+                      <p className="text-gray-600">
+                        Streamline workflows and eliminate repetitive tasks
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 shrink-0">
+                      <Cpu size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">AI Integration</h3>
+                      <p className="text-gray-600">
+                        Enhance systems with intelligent decision-making capabilities
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                  alt="Smart automation system"
+                  className="rounded-lg shadow-xl"
+                />
               </div>
             </div>
           </div>
@@ -161,6 +216,28 @@ const BusinessIntelligence = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        
+        {/* CTA Section - NEW */}
+        <section className="py-16 bg-indigo-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+              Unlock the Power of Data
+            </h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+              Transform your business with insights that drive growth and innovation.
+            </p>
+            <Button 
+              size="lg" 
+              className="gap-2 group bg-indigo-600 hover:bg-indigo-700" 
+              asChild
+            >
+              <Link to="/consultation">
+                Talk to Us Today
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </section>
         

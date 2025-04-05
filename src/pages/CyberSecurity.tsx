@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const CyberSecurity = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const securitySolutionsRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,6 +32,15 @@ const CyberSecurity = () => {
 
     return () => observer.disconnect();
   }, []);
+  
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -57,11 +67,9 @@ const CyberSecurity = () => {
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2 group" asChild>
-                    <Link to="/business">
-                      Explore Solutions
-                      <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
+                  <Button size="lg" variant="outline" className="gap-2 group" onClick={() => scrollToSection('security-solutions')}>
+                    Explore Solutions
+                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                 </div>
               </div>
@@ -77,7 +85,7 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Why It Matters Section - Updated with border and smaller cards */}
+        {/* Why It Matters Section - Moved up and full width */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -86,7 +94,7 @@ const CyberSecurity = () => {
               </h2>
             </div>
             
-            <div className="max-w-3xl mx-auto space-y-8 border border-gray-200 rounded-xl p-8 shadow-sm">
+            <div className="space-y-8 border border-gray-200 rounded-xl p-8 shadow-sm">
               <p className="text-center text-lg text-gray-600">
                 In today's interconnected digital landscape, cybersecurity is not just an IT concern but a fundamental business risk that affects organizations of all sizes. As cyber threats continue to evolve in sophistication and scale, businesses must adopt comprehensive security strategies to protect their critical assets, maintain customer trust, and ensure operational continuity.
               </p>
@@ -122,7 +130,7 @@ const CyberSecurity = () => {
         </section>
         
         {/* Services Section */}
-        <section className="py-20">
+        <section id="security-solutions" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-display">
@@ -278,7 +286,7 @@ const CyberSecurity = () => {
           </div>
         </section>
         
-        {/* Protect Your Business Section (NEW) */}
+        {/* Protect Your Business Section */}
         <section className="py-16 bg-red-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
@@ -309,4 +317,3 @@ const CyberSecurity = () => {
 };
 
 export default CyberSecurity;
-
