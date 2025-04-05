@@ -22,6 +22,8 @@ type ServiceDetailsProps = {
   benefitsTitle?: string;
   benefits: BenefitItem[];
   ctaText?: string;
+  ctaLink?: string;
+  showADABadge?: boolean;
 };
 
 const ServiceDetailsPage = ({
@@ -32,6 +34,8 @@ const ServiceDetailsPage = ({
   benefitsTitle = "Why Choose Us?",
   benefits,
   ctaText = "Get a Free Consultation",
+  ctaLink = "/consultation",
+  showADABadge = true,
 }: ServiceDetailsProps) => {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -117,23 +121,25 @@ const ServiceDetailsPage = ({
           {/* CTA Section */}
           <div className="text-center mb-12">
             <Button asChild className="bg-green-600 hover:bg-green-700" size="lg">
-              <Link to="/consultation">{ctaText}</Link>
+              <Link to={ctaLink}>{ctaText}</Link>
             </Button>
           </div>
         </div>
       </main>
 
       {/* ADA Affiliated Button */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <div className="flex items-center bg-white rounded-full shadow-lg px-4 py-2 border border-gray-200">
-          <img 
-            src="/lovable-uploads/5d4acd95-6fa5-4ed4-a366-2f825d97e0fc.png"
-            alt="ADA Affiliated" 
-            className="h-6 mr-2"
-          />
-          <span className="text-blue-600 font-medium">ADA Affiliated</span>
+      {showADABadge && (
+        <div className="fixed bottom-8 right-8 z-50">
+          <div className="flex items-center bg-white rounded-full shadow-lg px-4 py-2 border border-gray-200">
+            <img 
+              src="/lovable-uploads/5d4acd95-6fa5-4ed4-a366-2f825d97e0fc.png"
+              alt="ADA Affiliated" 
+              className="h-6 mr-2"
+            />
+            <span className="text-blue-600 font-medium">ADA Affiliated</span>
+          </div>
         </div>
-      </div>
+      )}
 
       <Footer />
     </div>

@@ -268,7 +268,7 @@ const CyberSecurity = () => {
                 <div className="mt-8">
                   <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700" asChild>
                     <Link to="/consultation">
-                      Request Security Assessment
+                      Extensive Security
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </Button>

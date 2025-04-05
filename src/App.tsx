@@ -20,6 +20,7 @@ import Consultation from "./pages/Consultation";
 import VulnerabilityAssessment from "./pages/business/VulnerabilityAssessment";
 import NetworkSecurity from "./pages/business/NetworkSecurity";
 import ThreatMonitoring from "./pages/business/ThreatMonitoring";
+import ComprehensiveCybersecurity from "./pages/business/ComprehensiveCybersecurity";
 
 // Consumer services pages
 import AppDevelopment from "./pages/consumer/AppDevelopment";
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/business/cybersecurity/vulnerability-assessment" element={<VulnerabilityAssessment />} />
           <Route path="/business/cybersecurity/network-security" element={<NetworkSecurity />} />
           <Route path="/business/cybersecurity/threat-monitoring" element={<ThreatMonitoring />} />
+          <Route path="/business/cybersecurity/comprehensive" element={<ComprehensiveCybersecurity />} />
           
           {/* Consumer service detail pages */}
           <Route path="/consumer/app-development" element={<AppDevelopment />} />
