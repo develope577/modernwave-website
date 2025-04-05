@@ -7,8 +7,12 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, LockKeyhole, Server, Shield, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
+import useScrollToTop from "@/hooks/useScrollToTop";
 
 const CyberSecurity = () => {
+  // Apply the scroll to top hook
+  useScrollToTop();
+  
   const sectionRef = useRef<HTMLDivElement>(null);
   const securitySolutionsRef = useRef<HTMLDivElement>(null);
   

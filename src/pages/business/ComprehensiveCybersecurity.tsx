@@ -1,11 +1,17 @@
+
 import { useRef, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Server, AlertTriangle, CheckCircle, Search, FileSearch, ArrowLeft, Lock } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import useScrollToTop from "@/hooks/useScrollToTop";
 
 const ComprehensiveCybersecurity = () => {
+  // Apply the scroll to top hook
+  useScrollToTop();
+  
   const sectionRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -62,7 +68,7 @@ const ComprehensiveCybersecurity = () => {
           </div>
         </section>
         
-        {/* Services Overview Section */}
+        {/* Services Overview Section - Updated to Flowchart Style */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -70,246 +76,134 @@ const ComprehensiveCybersecurity = () => {
                 Cybersecurity Services We Offer
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive protection for your digital assets through our suite of specialized security services
+                Our interconnected cybersecurity services provide comprehensive protection for your digital assets
               </p>
             </div>
             
-            <div className="space-y-16">
-              {/* Vulnerability Assessment */}
-              <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm">
-                <div className="p-8">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    <div className="md:w-2/3">
-                      <div className="flex items-center mb-4">
-                        <div className="h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                          <Shield size={20} />
-                        </div>
-                        <h3 className="text-2xl font-bold">1. Vulnerability Assessment</h3>
+            {/* Flowchart-style layout */}
+            <div className="relative">
+              {/* Connecting lines */}
+              <div className="absolute left-1/2 top-28 bottom-28 w-0.5 bg-gradient-to-b from-red-500 to-red-600 hidden md:block"></div>
+              
+              <div className="grid grid-cols-1 gap-16 max-w-3xl mx-auto">
+                {/* Service 1: Vulnerability Assessment */}
+                <div className="relative group">
+                  <div className="bg-slate-900 text-white rounded-xl p-6 shadow-md border border-slate-800 transition-all duration-300 group-hover:border-red-500 group-hover:shadow-red-500/20 group-hover:shadow-lg">
+                    <div className="flex items-center mb-4">
+                      <div className="h-10 w-10 bg-red-900/30 rounded-full flex items-center justify-center text-red-500 mr-4">
+                        <Shield size={20} />
                       </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold mb-2">Objective:</h4>
-                        <p className="text-gray-600">
-                          Our vulnerability assessment service focuses on identifying weaknesses within your organization's digital infrastructure. The goal is to proactively discover and fix vulnerabilities that could be exploited by cybercriminals, preventing data breaches and reducing the attack surface.
-                        </p>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold mb-2">Process:</h4>
-                        <div className="space-y-4">
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Search size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Initial Scanning & Discovery</h5>
-                              <p className="text-gray-600">
-                                We begin by scanning your systems, networks, and applications using cutting-edge tools and techniques. This allows us to identify weak points, such as outdated software, misconfigured systems, and unpatched vulnerabilities.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Search size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Risk Identification & Prioritization</h5>
-                              <p className="text-gray-600">
-                                After vulnerabilities are discovered, they are assessed based on severity. We prioritize high-risk vulnerabilities that could have a significant impact on your business if exploited.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <FileSearch size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Remediation & Fixing</h5>
-                              <p className="text-gray-600">
-                                Once risks are identified, we provide actionable steps to fix vulnerabilities. Our experts patch software, update configurations, and install security upgrades to eliminate risks.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <CheckCircle size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Re-Testing & Ongoing Monitoring</h5>
-                              <p className="text-gray-600">
-                                After the fixes are applied, we re-test the systems to ensure vulnerabilities are properly resolved. We then offer ongoing monitoring to detect emerging threats and ensure your systems stay secure over time.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <h3 className="text-2xl font-bold">Vulnerability Assessment</h3>
                     </div>
                     
-                    <div className="md:w-1/3 bg-red-50 rounded-lg p-6 flex items-center justify-center">
-                      <Shield size={120} className="text-red-300" />
+                    <p className="text-gray-300 mb-4">
+                      We identify and remediate security weaknesses before they can be exploited by malicious actors.
+                    </p>
+                    
+                    <div className="hidden group-hover:block mt-4 p-4 bg-slate-800 rounded-lg border-l-2 border-red-500">
+                      <h4 className="text-lg font-semibold mb-2 text-red-400">Key Components:</h4>
+                      <ul className="space-y-2 text-gray-300">
+                        <li className="flex items-start">
+                          <Search size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Comprehensive system scanning and penetration testing</span>
+                        </li>
+                        <li className="flex items-start">
+                          <AlertTriangle size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Risk assessment and prioritization</span>
+                        </li>
+                        <li className="flex items-start">
+                          <FileSearch size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Detailed remediation planning</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Verification and validation testing</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
+                  
+                  {/* Connection circle and arrow */}
+                  <div className="absolute left-1/2 -bottom-8 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full hidden md:block"></div>
+                  <div className="absolute left-1/2 -bottom-16 transform -translate-x-1/2 text-red-600 hidden md:block">↓</div>
                 </div>
-              </div>
-              
-              {/* Network Security */}
-              <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm">
-                <div className="p-8">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    <div className="md:w-1/3 bg-red-50 rounded-lg p-6 flex items-center justify-center order-last md:order-first">
-                      <Server size={120} className="text-red-300" />
+                
+                {/* Service 2: Network Security */}
+                <div className="relative group">
+                  <div className="bg-slate-900 text-white rounded-xl p-6 shadow-md border border-slate-800 transition-all duration-300 group-hover:border-red-500 group-hover:shadow-red-500/20 group-hover:shadow-lg">
+                    <div className="flex items-center mb-4">
+                      <div className="h-10 w-10 bg-red-900/30 rounded-full flex items-center justify-center text-red-500 mr-4">
+                        <Server size={20} />
+                      </div>
+                      <h3 className="text-2xl font-bold">Network Security</h3>
                     </div>
                     
-                    <div className="md:w-2/3">
-                      <div className="flex items-center mb-4">
-                        <div className="h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                          <Server size={20} />
-                        </div>
-                        <h3 className="text-2xl font-bold">2. Network Security</h3>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold mb-2">Objective:</h4>
-                        <p className="text-gray-600">
-                          Network security ensures the integrity, confidentiality, and availability of your organization's network infrastructure. By implementing strong network security measures, we help protect your business from unauthorized access, data breaches, and cyberattacks.
-                        </p>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold mb-2">Process:</h4>
-                        <div className="space-y-4">
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Shield size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Firewall Configuration & Management</h5>
-                              <p className="text-gray-600">
-                                A firewall acts as the first line of defense against unauthorized access. We configure and manage firewalls to protect your network from inbound and outbound threats.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <AlertTriangle size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Intrusion Detection & Prevention Systems (IDS/IPS)</h5>
-                              <p className="text-gray-600">
-                                We implement IDS/IPS systems that monitor network traffic for suspicious activity and can automatically block malicious activity in real-time. This provides immediate threat mitigation and ensures your network is not compromised.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Lock size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Virtual Private Network (VPN) Setup</h5>
-                              <p className="text-gray-600">
-                                Secure remote access is vital in today's work environment. We set up VPNs to provide encrypted communication for your remote workers and ensure secure access to your internal network.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Server size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Network Segmentation & Secure Communication</h5>
-                              <p className="text-gray-600">
-                                We divide your network into isolated segments to prevent the lateral movement of threats. Critical systems are secured with additional layers of protection, minimizing the impact of potential security breaches.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <p className="text-gray-300 mb-4">
+                      We protect your network infrastructure with advanced monitoring and protection systems.
+                    </p>
+                    
+                    <div className="hidden group-hover:block mt-4 p-4 bg-slate-800 rounded-lg border-l-2 border-red-500">
+                      <h4 className="text-lg font-semibold mb-2 text-red-400">Key Components:</h4>
+                      <ul className="space-y-2 text-gray-300">
+                        <li className="flex items-start">
+                          <Shield size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Advanced firewall configuration and management</span>
+                        </li>
+                        <li className="flex items-start">
+                          <AlertTriangle size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Intrusion detection and prevention systems</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Lock size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>VPN and secure remote access solutions</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Server size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Network segmentation and secure communication</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
+                  
+                  {/* Connection circle and arrow */}
+                  <div className="absolute left-1/2 -bottom-8 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full hidden md:block"></div>
+                  <div className="absolute left-1/2 -bottom-16 transform -translate-x-1/2 text-red-600 hidden md:block">↓</div>
                 </div>
-              </div>
-              
-              {/* Threat Monitoring */}
-              <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm">
-                <div className="p-8">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    <div className="md:w-2/3">
-                      <div className="flex items-center mb-4">
-                        <div className="h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                          <AlertTriangle size={20} />
-                        </div>
-                        <h3 className="text-2xl font-bold">3. Threat Monitoring & Ongoing Support</h3>
+                
+                {/* Service 3: Threat Monitoring */}
+                <div className="relative group">
+                  <div className="bg-slate-900 text-white rounded-xl p-6 shadow-md border border-slate-800 transition-all duration-300 group-hover:border-red-500 group-hover:shadow-red-500/20 group-hover:shadow-lg">
+                    <div className="flex items-center mb-4">
+                      <div className="h-10 w-10 bg-red-900/30 rounded-full flex items-center justify-center text-red-500 mr-4">
+                        <AlertTriangle size={20} />
                       </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold mb-2">Objective:</h4>
-                        <p className="text-gray-600">
-                          Threat monitoring is essential for identifying and responding to security incidents in real-time. Our service ensures that your systems are actively monitored 24/7 for potential threats, allowing us to mitigate attacks before they cause significant damage.
-                        </p>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold mb-2">Process:</h4>
-                        <div className="space-y-4">
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <Search size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">24/7 Threat Monitoring</h5>
-                              <p className="text-gray-600">
-                                We monitor all systems and networks continuously using state-of-the-art tools to detect vulnerabilities and threats. Whether it's a cyberattack or a system breach, our team identifies it in real-time and takes immediate action.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <AlertTriangle size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Incident Response & Mitigation</h5>
-                              <p className="text-gray-600">
-                                Our team is ready to respond to threats at any time. Once a threat is detected, we investigate the issue, contain the threat, and work to mitigate any damage. This process minimizes downtime and ensures that your business operations continue smoothly.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <CheckCircle size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Regular Security Audits</h5>
-                              <p className="text-gray-600">
-                                We conduct regular security audits to assess the overall health of your cybersecurity infrastructure. This ensures that systems are continuously updated and that no new vulnerabilities have emerged.
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex">
-                            <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                              <CheckCircle size={20} />
-                            </div>
-                            <div>
-                              <h5 className="font-medium mb-2">Ongoing Support & Maintenance</h5>
-                              <p className="text-gray-600">
-                                Security is not a one-time effort. We offer ongoing support to ensure your systems are always up-to-date, with patches, updates, and configurations regularly maintained to prevent future vulnerabilities.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <h3 className="text-2xl font-bold">Threat Monitoring & Ongoing Support</h3>
                     </div>
                     
-                    <div className="md:w-1/3 bg-red-50 rounded-lg p-6 flex items-center justify-center">
-                      <AlertTriangle size={120} className="text-red-300" />
+                    <p className="text-gray-300 mb-4">
+                      We continuously monitor your systems for threats and provide immediate response to security incidents.
+                    </p>
+                    
+                    <div className="hidden group-hover:block mt-4 p-4 bg-slate-800 rounded-lg border-l-2 border-red-500">
+                      <h4 className="text-lg font-semibold mb-2 text-red-400">Key Components:</h4>
+                      <ul className="space-y-2 text-gray-300">
+                        <li className="flex items-start">
+                          <Search size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>24/7 real-time threat monitoring</span>
+                        </li>
+                        <li className="flex items-start">
+                          <AlertTriangle size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Incident response and rapid mitigation</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Regular security audits and assessments</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle size={16} className="text-red-500 mr-2 mt-1 shrink-0" />
+                          <span>Proactive maintenance and updates</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
