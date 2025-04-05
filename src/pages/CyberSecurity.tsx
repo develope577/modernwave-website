@@ -152,7 +152,7 @@ const CyberSecurity = () => {
                     Comprehensive scanning and evaluation of your infrastructure to identify security gaps before they can be exploited.
                   </p>
                   <Link 
-                    to="#" 
+                    to="/business/cybersecurity/vulnerability-assessment" 
                     className="text-red-600 font-medium flex items-center gap-1 group"
                   >
                     Learn more
@@ -167,14 +167,14 @@ const CyberSecurity = () => {
               <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                    <LockKeyhole size={24} />
+                    <AlertTriangle size={24} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Data Encryption</h3>
+                  <h3 className="text-xl font-semibold mb-3">Threat Monitoring & Support</h3>
                   <p className="text-gray-600 mb-6">
-                    Protect sensitive information with enterprise-grade encryption solutions for data at rest and in transit.
+                    24/7 monitoring and rapid response to security threats with ongoing support to maintain system integrity.
                   </p>
                   <Link 
-                    to="#" 
+                    to="/business/cybersecurity/threat-monitoring" 
                     className="text-red-600 font-medium flex items-center gap-1 group"
                   >
                     Learn more
@@ -196,7 +196,7 @@ const CyberSecurity = () => {
                     Advanced firewall configuration, intrusion detection, and network monitoring to prevent unauthorized access.
                   </p>
                   <Link 
-                    to="#" 
+                    to="/business/cybersecurity/network-security" 
                     className="text-red-600 font-medium flex items-center gap-1 group"
                   >
                     Learn more
