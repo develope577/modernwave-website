@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Server, AlertTriangle, CheckCircle, Search, FileSearch, ArrowLeft } from "lucide-react";
+import { ArrowRight, Shield, Server, AlertTriangle, CheckCircle, Search, FileSearch, ArrowLeft, Lock } from "lucide-react";
 
 const ComprehensiveCybersecurity = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -197,7 +197,7 @@ const ComprehensiveCybersecurity = () => {
                   
                   <div className="flex">
                     <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                      <LockKeyhole size={20} />
+                      <Lock size={20} />
                     </div>
                     <div>
                       <h5 className="font-medium mb-2">Virtual Private Network (VPN) Setup</h5>
@@ -353,7 +353,7 @@ const ComprehensiveCybersecurity = () => {
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <div className="shrink-0 h-10 w-10 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
-                  <LockKeyhole size={20} />
+                  <Lock size={20} />
                 </div>
                 <h3 className="text-xl font-semibold">Protect Sensitive Information</h3>
               </div>
