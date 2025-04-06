@@ -99,11 +99,11 @@ const CyberSecurity = () => {
             </div>
             
             <div className="space-y-8 border border-gray-200 rounded-xl p-8 shadow-sm">
-              <p className="text-center text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 In today's interconnected digital landscape, cybersecurity is not just an IT concern but a fundamental business risk that affects organizations of all sizes. As cyber threats continue to evolve in sophistication and scale, businesses must adopt comprehensive security strategies to protect their critical assets, maintain customer trust, and ensure operational continuity.
               </p>
               
-              <p className="text-center text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 The cost of cybersecurity breaches extends far beyond immediate financial losses, affecting brand reputation, customer relationships, and competitive positioning. By implementing robust security measures, organizations can not only defend against current threats but also build resilience against emerging risks in an increasingly complex threat landscape.
               </p>
               
@@ -158,20 +158,7 @@ const CyberSecurity = () => {
                 </CardContent>
               </Card>
               
-              {/* Swapped position - Now shows Threat Monitoring in the middle */}
-              <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
-                    <AlertTriangle size={24} />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Threat Monitoring & Support</h3>
-                  <p className="text-gray-600 mb-6">
-                    24/7 monitoring and rapid response to security threats with ongoing support to maintain system integrity.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              {/* Swapped position - Now shows Network Security at the end */}
+              {/* Swapped position - Now shows Network Security in the middle */}
               <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
@@ -180,6 +167,19 @@ const CyberSecurity = () => {
                   <h3 className="text-xl font-semibold mb-3">Network Security</h3>
                   <p className="text-gray-600 mb-6">
                     Advanced firewall configuration, intrusion detection, and network monitoring to prevent unauthorized access.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              {/* Swapped position - Now shows Threat Monitoring at the end */}
+              <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
+                    <AlertTriangle size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Threat Monitoring & Support</h3>
+                  <p className="text-gray-600 mb-6">
+                    24/7 monitoring and rapid response to security threats with ongoing support to maintain system integrity.
                   </p>
                 </CardContent>
               </Card>
