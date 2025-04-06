@@ -155,19 +155,10 @@ const CyberSecurity = () => {
                   <p className="text-gray-600 mb-6">
                     Comprehensive scanning and evaluation of your infrastructure to identify security gaps before they can be exploited.
                   </p>
-                  <Link 
-                    to="/business/cybersecurity/vulnerability-assessment" 
-                    className="text-red-600 font-medium flex items-center gap-1 group"
-                  >
-                    Learn more
-                    <ArrowRight 
-                      size={16} 
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                  </Link>
                 </CardContent>
               </Card>
               
+              {/* Swapped position - Now shows Threat Monitoring in the middle */}
               <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
@@ -177,19 +168,10 @@ const CyberSecurity = () => {
                   <p className="text-gray-600 mb-6">
                     24/7 monitoring and rapid response to security threats with ongoing support to maintain system integrity.
                   </p>
-                  <Link 
-                    to="/business/cybersecurity/threat-monitoring" 
-                    className="text-red-600 font-medium flex items-center gap-1 group"
-                  >
-                    Learn more
-                    <ArrowRight 
-                      size={16} 
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                  </Link>
                 </CardContent>
               </Card>
               
+              {/* Swapped position - Now shows Network Security at the end */}
               <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
@@ -199,16 +181,6 @@ const CyberSecurity = () => {
                   <p className="text-gray-600 mb-6">
                     Advanced firewall configuration, intrusion detection, and network monitoring to prevent unauthorized access.
                   </p>
-                  <Link 
-                    to="/business/cybersecurity/network-security" 
-                    className="text-red-600 font-medium flex items-center gap-1 group"
-                  >
-                    Learn more
-                    <ArrowRight 
-                      size={16} 
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                  </Link>
                 </CardContent>
               </Card>
             </div>
@@ -271,8 +243,8 @@ const CyberSecurity = () => {
                 
                 <div className="mt-8">
                   <Button size="lg" className="gap-2 group bg-red-600 hover:bg-red-700" asChild>
-                    <Link to="/consultation">
-                      Extensive Security
+                    <Link to="/business/cybersecurity/comprehensive">
+                      Explore Full Security Process
                       <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </Button>
