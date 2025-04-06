@@ -69,8 +69,8 @@ const NetworkSecurity = () => {
       <Navbar />
       
       <main className="flex-grow pt-16">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-b from-red-900/50 to-zinc-900 py-24" ref={sectionRef}>
+        {/* Hero Section - Updated background color */}
+        <section className="bg-gradient-to-b from-zinc-800 to-zinc-900 py-24" ref={sectionRef}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold font-display mb-6">
