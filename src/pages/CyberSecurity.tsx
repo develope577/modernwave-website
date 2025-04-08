@@ -154,7 +154,7 @@ const CyberSecurity = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               {[
                 {
                   icon: <Shield size={24} />,
@@ -174,14 +174,15 @@ const CyberSecurity = () => {
               ].map((service, idx) => (
                 <Card
                   key={idx}
-                  className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                  className="w-[45%] h-[28rem] min-w-[300px] border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <CardContent className="pt-6">
+                  <CardContent className="pt-6 h-full flex flex-col">
                     <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
                       {service.icon}
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-6">{service.desc}</p>
+                    <p className="text-gray-600">{service.desc}</p>
+                    <div className="flex-grow" />
                   </CardContent>
                 </Card>
               ))}
