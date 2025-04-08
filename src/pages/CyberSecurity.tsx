@@ -116,4 +116,81 @@ const CyberSecurity = () => {
                     </p>
                   </div>
                   
-                  <div className="bg-red-50 rounded-lg
+                  <div className="bg-red-50 rounded-lg p-4 text-center w-24 mx-auto flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold text-red-600 mb-2">$4.35M</h3>
+                    <p className="text-gray-700 text-sm">
+                      average cost of a data breach in 2022, a record high
+                    </p>
+                  </div>
+                  
+                  <div className="bg-red-50 rounded-lg p-4 text-center w-24 mx-auto flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold text-red-600 mb-2">300%</h3>
+                    <p className="text-gray-700 text-sm">
+                      increase in reported cybercrimes since the beginning of the pandemic
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Services Section */}
+        <section id="security-solutions" className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-display">
+                Comprehensive Security Solutions
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                From threat assessment to incident response, our cybersecurity services provide end-to-end protection for your business.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
+                    <Shield size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Vulnerability Assessment</h3>
+                  <p className="text-gray-600 mb-6">
+                    Comprehensive scanning and evaluation of your infrastructure to identify security gaps before they can be exploited.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
+                    <Server size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Network Security</h3>
+                  <p className="text-gray-600 mb-6">
+                    Advanced firewall configuration, intrusion detection, and network monitoring to prevent unauthorized access.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-red-100 text-red-600 mb-6">
+                    <AlertTriangle size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Threat Monitoring & Support</h3>
+                  <p className="text-gray-600 mb-6">
+                    24/7 monitoring and rapid response to security threats with ongoing support to maintain system integrity.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default CyberSecurity;
