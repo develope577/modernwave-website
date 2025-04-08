@@ -94,7 +94,7 @@ const CyberSecurity = () => {
               </h2>
             </div>
             
-            <<div className="grid grid-cols-1 md:grid-cols-3 gap-8 border border-gray-200 rounded-xl p-8 shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="md:col-span-2">
                 <div className="space-y-8">
                   <p className="text-lg text-gray-600">
