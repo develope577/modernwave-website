@@ -130,7 +130,7 @@ const CyberSecurity = () => {
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-red-50 rounded-lg p-4 text-center w-36 flex flex-col items-center justify-center"
+                    className="bg-red-50 rounded-lg p-4 text-center w-20 h-36 flex flex-col items-center justify-center"
                   >
                     <h3 className="text-2xl font-bold text-red-600 mb-2">{item.stat}</h3>
                     <p className="text-gray-700 text-sm">{item.desc}</p>
