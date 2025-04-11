@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary text-white">
                 <span className="font-semibold">A</span>
               </div>
-              <span className="font-display font-medium">TechSolutions</span>
+              <span className="font-display font-medium">ADA Tech Ventures</span>
             </div>
             <p className="text-sm text-gray-400 mb-6">
               Innovative technology solutions for businesses and consumers. Simplifying the complex, amplifying results.
@@ -101,13 +101,13 @@ const Footer = () => {
               <li>123 Innovation Way</li>
               <li>San Francisco, CA 94107</li>
               <li>
-                <a href="tel:(555) 123-4567" className="hover:text-white transition-colors">
-                  (555) 123-4567
+              <a href="mailto:contact@techsolutions.com" className="hover:text-white transition-colors">
+                  info@adatechventures.com
                 </a>
               </li>
               <li>
                 <a href="mailto:contact@techsolutions.com" className="hover:text-white transition-colors">
-                  contact@techsolutions.com
+                  support@adatechventures.com
                 </a>
               </li>
             </ul>
@@ -116,7 +116,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} TechSolutions. All rights reserved.
+            © {new Date().getFullYear()} ADA Tech Ventures. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">

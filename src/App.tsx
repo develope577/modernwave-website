@@ -72,7 +72,7 @@ const App = () => (
             <Route path="/consumer/ecommerce-integration" element={<EcommerceIntegration />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="/NotFound" element={<NotFound />} />
           </Routes>
         </ScrollToTop>
       </BrowserRouter>

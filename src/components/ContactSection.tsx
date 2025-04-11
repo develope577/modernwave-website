@@ -93,6 +93,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-3">
                     <h4 className="text-white/90 font-medium">Email</h4>
+                    <div className="my-4"></div>
                     <a  className="text-white/90 font-medium"> For general , collaborations, or non-technical matters, contact us here </a>
                     <div className="my-4"></div>  
                     <a href="mailto:contact@techsolutions.com" className="text-white/70 hover:text-white">
@@ -106,6 +107,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-3">
                     <h4 className="text-white/90 font-medium">Email</h4>
+                    <div className="my-4"></div>
                     <a  className="text-white/90 font-medium"> For technical issues contact us here </a>
                     <div className="my-4"></div>
                     <a href="mailto:contact@techsolutions.com" className="text-white/70 hover:text-white">
