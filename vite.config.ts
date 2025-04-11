@@ -1,22 +1,26 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
+import { fileURLToPath } from "url";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+// Convert file URL to directory path (for ESM compatibility)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default defineConfig({
+  plugins: [react()], // Enable React support
   server: {
-    host: "::",
-    port: 8080,
+    host: "localhost", // Serve on localhost
+    port: 5173, // Default Vite port
+    open: true, // Automatically open the app in the browser
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"), // Alias for the src directory
     },
   },
-}));
+  build: {
+    outDir: "dist", // Output directory for the production build
+    emptyOutDir: true, // Clear the output directory before building
+  },
+});

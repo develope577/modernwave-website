@@ -44,10 +44,20 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
+    
+    // Send to Formspree
+    await fetch('hhttps://formspree.io/f/mvgkdbgy', { // Replace with your Formspree ID
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+  
     console.log("Form submitted:", formData);
+    
     // Reset form after submission
     setFormData({
       name: "",
@@ -55,6 +65,7 @@ const ContactSection = () => {
       subject: "",
       message: "",
     });
+  
     // Show success message
     alert("Thank you for your message! We'll get back to you soon.");
   };

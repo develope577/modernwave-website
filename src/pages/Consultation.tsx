@@ -139,9 +139,18 @@ const ConsultationPage = () => {
     },
   });
   
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
     console.log("Form submitted:", data);
     
+    // Send to Formspree
+    await fetch('https://formspree.io/f/mldjdozw', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+  
     // Show success message
     toast.success("Thank you! Your request has been received. Our team will contact you shortly.", {
       duration: 5000,
