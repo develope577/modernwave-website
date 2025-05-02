@@ -17,20 +17,6 @@ const Footer = () => {
             <p className="text-sm text-gray-400 mb-6">
               Innovative technology solutions for businesses and consumers. Simplifying the complex, amplifying results.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={18} />
-              </a>
-            </div>
           </div>
           
           <div>
@@ -101,12 +87,12 @@ const Footer = () => {
               <li>123 Innovation Way</li>
               <li>San Francisco, CA 94107</li>
               <li>
-              <a href="mailto:contact@techsolutions.com" className="hover:text-white transition-colors">
+              <a href="mailto:info@adatechventures.com" className="hover:text-white transition-colors">
                   info@adatechventures.com
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@techsolutions.com" className="hover:text-white transition-colors">
+                <a href="mailto:support@adatechventures.com" className="hover:text-white transition-colors">
                   support@adatechventures.com
                 </a>
               </li>
