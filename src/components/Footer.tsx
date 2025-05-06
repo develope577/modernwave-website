@@ -84,7 +84,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <ul className="space-y-3 text-gray-400">
-              <a href="mailto:info@adatechventures.com" className="hover:text-white transition-colors">
+              <li>
+                <a href="mailto:info@adatechventures.com" className="hover:text-white transition-colors">
                   info@adatechventures.com
                 </a>
               </li>
