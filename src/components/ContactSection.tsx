@@ -116,8 +116,8 @@ const ContactSection = () => {
                       <div className="my-4"></div>
                       <a className="text-white/90 font-medium"> For technical issues contact us here </a>
                       <div className="my-4"></div>
-                      <a href="mailto:supportt@adatechventures.tech" className="text-white/70 hover:text-white">
-                        supportt@adatechventures.tech
+                      <a href="mailto:support@adatechventures.tech" className="text-white/70 hover:text-white">
+                        support@adatechventures.tech
                       </a>
                     </div>
                   </div>
