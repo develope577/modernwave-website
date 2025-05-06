@@ -29,14 +29,14 @@ const ConsumerSection = () => {
   }, []);
 
   return (
-    <section id="consumer-solutions" className="py-20 bg-green-600" ref={sectionRef}>
+    <section id="consumer-solutions" className="py-20 bg-gradient-to-b from-green-50 to-green-100" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
           <span className="text-sm font-medium text-green-600 bg-green-100 px-4 py-1.5 rounded-full">FOR CONSUMERS</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold font-display text-white">
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold font-display text-green-800">
             Smart Tech for Everyday Needs
           </h2>
-          <p className="mt-4 text-lg text-white max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-green-700 max-w-3xl mx-auto">
             Intuitive personal solutions that make daily life more efficient, connected, and enjoyable.
           </p>
         </div>
@@ -129,11 +129,11 @@ const ConsumerSection = () => {
         
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400">
           <div className="order-2 md:order-1">
-            <h3 className="text-2xl font-bold mb-4 text-white">Technology that adapts to your lifestyle</h3>
-            <p className="text-white mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-green-800">Technology that adapts to your lifestyle</h3>
+            <p className="text-green-700 mb-6">
               Our consumer solutions are designed to be adaptive, affordable, and seamlessly integrate into your daily routine.
             </p>
-            <Button variant="green" size="lg" asChild className="bg-white text-green-600 hover:bg-gray-100">
+            <Button variant="green" size="lg" asChild>
               <Link to="/consultation">Try Consumer Tech</Link>
             </Button>
           </div>
