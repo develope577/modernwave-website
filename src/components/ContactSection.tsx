@@ -1,13 +1,18 @@
 
 import { useEffect, useRef, useState } from "react";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useLocation } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  const isMobile = useIsMobile();
+  const isContactPage = location.pathname === "/contact";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -81,45 +86,47 @@ const ContactSection = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
-          <div className="lg:col-span-2 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
-            <div className="bg-[#3B5998] text-white rounded-xl p-8">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-              
-
-              <div className="space-y-6">  
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <Mail size={18} className="text-white/80" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="text-white/90 font-medium">Email</h4>
-                    <div className="my-4"></div>
-                    <a  className="text-white/90 font-medium"> For general , collaborations, or non-technical matters, contact us here </a>
-                    <div className="my-4"></div>  
-                    <a href="mailto:contact@techsolutions.com" className="text-white/70 hover:text-white">
-                      info@adatechventures.tech
-                    </a>
-                  </div>
-                </div>  
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <Mail size={18} className="text-white/80" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="text-white/90 font-medium">Email</h4>
-                    <div className="my-4"></div>
-                    <a  className="text-white/90 font-medium"> For technical issues contact us here </a>
-                    <div className="my-4"></div>
-                    <a href="mailto:contact@techsolutions.com" className="text-white/70 hover:text-white">
-                      supportt@adatechventures.tech
-                    </a>
+          {/* Hide on mobile except for contact page */}
+          {(!isMobile || isContactPage) && (
+            <div className="lg:col-span-2 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
+              <div className="bg-[#3B5998] text-white rounded-xl p-8">
+                <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+                
+                <div className="space-y-6">  
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <Mail size={18} className="text-white/80" />
+                    </div>
+                    <div className="ml-3">
+                      <h4 className="text-white/90 font-medium">Email</h4>
+                      <div className="my-4"></div>
+                      <a className="text-white/90 font-medium"> For general, collaborations, or non-technical matters, contact us here </a>
+                      <div className="my-4"></div>  
+                      <a href="mailto:info@adatechventures.tech" className="text-white/70 hover:text-white">
+                        info@adatechventures.tech
+                      </a>
+                    </div>
+                  </div>  
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <Mail size={18} className="text-white/80" />
+                    </div>
+                    <div className="ml-3">
+                      <h4 className="text-white/90 font-medium">Email</h4>
+                      <div className="my-4"></div>
+                      <a className="text-white/90 font-medium"> For technical issues contact us here </a>
+                      <div className="my-4"></div>
+                      <a href="mailto:supportt@adatechventures.tech" className="text-white/70 hover:text-white">
+                        supportt@adatechventures.tech
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
           
-          <div className="lg:col-span-3 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
+          <div className={`${(!isMobile || isContactPage) ? 'lg:col-span-3' : 'lg:col-span-5'} animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200`}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <h3 className="text-xl font-semibold mb-6">Send us a message</h3>
               
